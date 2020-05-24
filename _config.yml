@@ -58,3 +58,8 @@ sass:
 
 plugins:
  - jekyll-seo-tag
+
+# Show future posts
+future: true
+# Specify my timezone
+timezone: TIMEZONE
