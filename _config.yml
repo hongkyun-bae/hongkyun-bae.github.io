@@ -15,7 +15,7 @@ github_username:  hyunjoon526
 # facebook_username: jekyll
 # flickr_username: jekyll
 #instagram_username: chillwildlife
-linkedin_username: hjkim@theory.snu.ac.kr
+linkedin_username: hyunjoon-kim
 # pinterest_username: jekyll
 #youtube_username: globalmtb
 # googleplus_username: +jekyll
@@ -25,7 +25,7 @@ linkedin_username: hjkim@theory.snu.ac.kr
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name is Hyunjoon Kim and I'm a Ph.D. candidate in computer science and engineering, Seoul National University.
-  My research interests are <mark>Big Data Anaylsis</mark>, <mark>Graph Database</mark>, <mark>Algorithms & Data Structures</mark>
+  My research interests are <mark>Big Data Analysis</mark>, <mark>Graph Database</mark>, <mark>Algorithms & Data Structures</mark>
 
 
 # Projects Section
