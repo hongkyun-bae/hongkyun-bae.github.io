@@ -27,18 +27,17 @@ about_content: | # this will include new lines to allow paragraphs
   Hi, my name is Hyunjoon Kim. I'm a Ph.D. candidate in computer science and engineering, Seoul National University.
   My research interests are <mark>Big Data Analysis</mark>, <mark>Graph Database</mark>, <mark>Algorithms & Data Structures</mark>
   
+# Education Section
+educaton_title: Education
+
+# Experience Section
+experience_title: Experience
 
 # Publications Section
-# publications_title: Publications
+publications_title: Publications
 
 # Projects Section
 # projects_title: Projects
-
-# Experience Section
-# experience_title: Experience
-
-# Education Section
-# educaton_title: Education
 
 # More Section
 # more_title: A Little More About Me
