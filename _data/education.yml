@@ -1,15 +1,15 @@
 - layout: left
   name: Seoul National University
   dates: Sep. 2013 - Present
-  qualification: Ph.D. in computer science and engineering
+  qualification: #  Ph.D. in computer science and engineering
   quote: >
   description: | # this will include new lines to allow paragraphs
-    Ph.D. candidate
+    Ph.D. in computer science and engineering
 - layout: left
   name: Seoul National University
   dates: Mar. 2009 - Feb. 2013
-  qualification: B.S. in computer science and engineering
+  qualification: # B.S. in computer science and engineering
   quote: >
   description: | # this will include new lines to allow paragraphs
-   *Summa Cum Laude*
+    B.S. in computer science and engineering (*Summa Cum Laude*)
 
