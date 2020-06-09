@@ -1,5 +1,5 @@
 # Site
-repository: sproogen/resume-theme
+repository: Hyunjoon526/hyunjoon526.github.io
 favicon: images/favicon.ico
 
 # Personal info
@@ -52,7 +52,7 @@ projects_title: Projects
 footer_show_references: true
 
 # Build settings
-remote_theme: sproogen/resume-theme
+remote_theme: Hyunjoon526/hyunjoon526.github.io
 
 sass:
   sass_dir: _sass
