@@ -65,3 +65,5 @@ plugins:
 future: true
 # Specify my timezone
 timezone: TIMEZONE
+
+theme: jekyll-theme-minimal
