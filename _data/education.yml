@@ -1,5 +1,5 @@
 - layout: left
-  name: [Seoul National University](https://en.snu.ac.kr)
+  name: Seoul National University
   dates: Sep. 2013 - Present
   qualification: #  Ph.D. in computer science and engineering
   quote: >
@@ -10,7 +10,7 @@
     
     - 'Thesis: Fast Graph Query Processing Algorithms Using Dynamic Programming'
 - layout: left
-  name: [Seoul National University](https://en.snu.ac.kr)
+  name: Seoul National University
   dates: Mar. 2009 - Feb. 2013
   qualification: # B.S. in computer science and engineering
   quote: >
