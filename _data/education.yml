@@ -3,8 +3,8 @@
   dates: Sep. 2013 - Present
   qualification: #  Ph.D. in computer science and engineering
   quote: >
-  description: |+ # this will include new lines to allow paragraphs
-    - Ph.D. in computer science and engineering
+  description: |+
+    #- Ph.D. in computer science and engineering
     #- [Computer Theory and Application Lab]("http://theory.snu.ac.kr") "(Advisor: Kunsoo Park)"
     #- "Thesis: Fast Graph Query Processing Algorithms Using Dynamic Programming"
 - layout: left
@@ -12,6 +12,6 @@
   dates: Mar. 2009 - Feb. 2013
   qualification: # B.S. in computer science and engineering
   quote: >
-  description: |+ # this will include new lines to allow paragraphs
-    - B.S. in computer science and engineering (*Summa Cum Laude*)
+  description: |+ 
+    #- B.S. in computer science and engineering (*Summa Cum Laude*)
 
