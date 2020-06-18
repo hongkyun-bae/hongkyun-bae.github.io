@@ -1,14 +1,12 @@
 - layout: top-middle
   name: Selected Publications
-  bold: 
-  - Hyunjoon Kim
   description: |+
-    - Hyunjoon Kim, Seunghwan Min, Kunsoo Park, Xuemin Lin, Seok-Hee Hong, and Wook-Shin Han. "IDAR: Fast Supergraph Search Using DAG Integration." VLDB, 2020. 
+    - **Hyunjoon Kim**, Seunghwan Min, Kunsoo Park, Xuemin Lin, Seok-Hee Hong, and Wook-Shin Han. "IDAR: Fast Supergraph Search Using DAG Integration." VLDB, 2020. 
 
-    - Hyunjoon Kim, Yunyoung Choi, Kunsoo Park, Xuemin Lin, Seok-Hee Hong, and Wook-Shin Han. "Fast Subgraph Query Processing and Subgrpah Matching." work in progress.
+    - **Hyunjoon Kim**, Yunyoung Choi, Kunsoo Park, Xuemin Lin, Seok-Hee Hong, and Wook-Shin Han. "Fast Subgraph Query Processing and Subgrpah Matching." work in progress.
 
-    - Myoungji Han, Hyunjoon Kim, Geonmo Gu, Kunsoo Park, and Wook-Whin Han. "Efficient Subgraph Matching: Harmonizing Dynamic Programming, Adaptive Matching Order, and Failing Set Together." SIGMOD, 2019.
+    - Myoungji Han, **Hyunjoon Kim**, Geonmo Gu, Kunsoo Park, and Wook-Whin Han. "Efficient Subgraph Matching: Harmonizing Dynamic Programming, Adaptive Matching Order, and Failing Set Together." SIGMOD, 2019.
 
-    - Joong Chae Na, Hyunjoon Kim, Seunghwan Min, Heejin Park, Theirry Lecroq, Martine L\'eonard, Laurent Mouchard, and Kunsoo Park. "FM-index of Alignment with Gaps." Theoretical Computer Science, 2018.
+    - Joong Chae Na, **Hyunjoon Kim**, Seunghwan Min, Heejin Park, Theirry Lecroq, Martine L\'eonard, Laurent Mouchard, and Kunsoo Park. "FM-index of Alignment with Gaps." Theoretical Computer Science, 2018.
 
-    - Joong Chae Na, Hyunjoon Kim, Heejin Park, Theirry Lecroq, Martine L\'eonard, Laurent Mouchard, and Kunsoo Park. "FM-index of Alignment: A Compressed Index for Similar Strings." Theoretical Computer Science, 2016.
+    - Joong Chae Na, **Hyunjoon Kim**, Heejin Park, Theirry Lecroq, Martine L\'eonard, Laurent Mouchard, and Kunsoo Park. "FM-index of Alignment: A Compressed Index for Similar Strings." Theoretical Computer Science, 2016.
