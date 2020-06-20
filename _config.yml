@@ -25,7 +25,7 @@ linkedin_username: hyunjoon-kim
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name is Hyunjoon Kim. I'm a Ph.D. candidate in computer science and engineering, Seoul National University.
-  My research interests are <mark>Big Data Analysis</mark>, <mark>Graph Database</mark>, <mark>Algorithms & Data Structures</mark>
+  My research interests are <mark>Big Data Analysis</mark>, <mark>Graph Database</mark>, <mark>Graph Neural Networks</mark>, <mark>Algorithms & Data Structures</mark>
   
 # Education Section
 educaton_title: Education
