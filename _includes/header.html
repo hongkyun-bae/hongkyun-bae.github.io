@@ -97,6 +97,13 @@
             </a>
           </li>
         {%- endif -%}
+        {%- if site.cv_username -%}
+          <li>
+            <a target="_blank" href="https://hyunjoon526.github.io/{{ site.cv_username | escape }}.pdf" class="button button--sacnite button--round-l">
+              <i class="ai ai-cv" title="CV link"></i>
+            </a>
+          </li>
+        {%- endif -%}
         {% for link in site.additional_links %}
           <li>
             {% include a.html href=link.url class="button button--sacnite button--round-l" %}
