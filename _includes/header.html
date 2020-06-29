@@ -97,6 +97,13 @@
             </a>
           </li>
         {%- endif -%}
+        {%- if site.googlescholar_username -%}
+          <li>
+            <a target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username | escape }}" class="button button--sacnite button--round-l">
+              <i class="ai ai-google-scholar" title="Google scholar link"></i>
+            </a>
+          </li>
+        {%- endif -%}
         {%- if site.cv_username -%}
           <li>
             <a target="_blank" href="https://hyunjoon526.github.io/{{ site.cv_username | escape }}.pdf" class="button button--sacnite button--round-l">
