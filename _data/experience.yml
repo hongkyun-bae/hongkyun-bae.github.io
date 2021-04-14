@@ -1,16 +1,8 @@
 - layout: left
-  company: Computer Theory and Application Lab.
+  company: SAP Labs Korea
   link: 
-  job_title:
-  dates: April 2013 - May 2013
+  job_title: 
+  dates: October 2020 - Current
   description: | # this will include new lines to allow paragraphs
-    Research Intern
-- layout: left
-  company: Distributed Computing Systems Lab.
-  link: 
-  job_title:
-  dates: February 2013 - March 2013
-  quote: # >
-   # Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
-  description: | # this will include new lines to allow paragraphs
-    Research Intern
+    Senior Developer
+
