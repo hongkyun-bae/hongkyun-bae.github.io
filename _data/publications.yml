@@ -1,9 +1,9 @@
 - layout: top-middle
   name: 
   description: |+
+    - **Hyunjoon Kim**, Yunyoung Choi, Kunsoo Park, Xuemin Lin, Seok-Hee Hong, and Wook-Shin Han. "Versatile Equivalences: Speeding up Subgraph Query Processing and Subgrpah Matching." SIGMOD, 2021.  
+  
     - **Hyunjoon Kim**, Seunghwan Min, Kunsoo Park, Xuemin Lin, Seok-Hee Hong, and Wook-Shin Han. "IDAR: Fast Supergraph Search Using DAG Integration." VLDB, 2020. 
-
-    - **Hyunjoon Kim**, Yunyoung Choi, Kunsoo Park, Xuemin Lin, Seok-Hee Hong, and Wook-Shin Han. "Fast Subgraph Query Processing and Subgrpah Matching." work in progress.
 
     - Myoungji Han, **Hyunjoon Kim**, Geonmo Gu, Kunsoo Park, and Wook-Whin Han. "Efficient Subgraph Matching: Harmonizing Dynamic Programming, Adaptive Matching Order, and Failing Set Together." SIGMOD, 2019.
 
