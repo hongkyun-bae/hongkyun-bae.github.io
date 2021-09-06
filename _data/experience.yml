@@ -1,8 +1,15 @@
 - layout: left
+  company: Hanyang University
+  link: 
+  job_title: 
+  dates: Sep. 2020 - Current
+  description: | # this will include new lines to allow paragraphs
+    Assistant Professor at Department of Data Science
+
+- layout: left
   company: SAP Labs Korea
   link: 
   job_title: 
-  dates: October 2020 - Current
+  dates: Oct. 2020 - Aug. 2021
   description: | # this will include new lines to allow paragraphs
     Senior Developer
-
