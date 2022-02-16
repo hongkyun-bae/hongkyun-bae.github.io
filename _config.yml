@@ -8,6 +8,7 @@ title: Assistant Professor
 #email: hjkim@theory.snu.ac.kr
 email: hyunjoonkim@hanyang.ac.kr
 website: hyunjoon526.github.io
+lab: sites.google.com/view/hyudatalab 
 
 # Social links
 #twitter_username: facespics
@@ -27,8 +28,8 @@ cv_username: hjkimCV
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hello, I'm Hyunjoon Kim. Currently I serve as an assistant professor in Department of Data Science at Hanyang University, Seoul, Korea. In 2020, I completed PhD degree in computer science and engineering at Seoul National University. In 2020-2021, I had worked as a software developer at SAP Labs Korea.
-  My research interests are <mark>Big Data Analysis</mark>, <mark>Graph Database</mark>, <mark>Information Retrieval</mark>, <mark>Graph Neural Networks</mark>, <mark>Algorithms & Data Structures</mark>
+  Hello, I'm Hyunjoon Kim. I serve as an assistant professor in Department of Data Science at Hanyang University. I received B.S. in Computer Science and Engineering from Seoul National University. In 2020, I received Ph.D. in Computer Science and Engineering at Seoul National University. In 2020-2021, I had worked as a senior developer at SAP Labs Korea.
+  My research interests are <mark>Big Data Analysis</mark>, <mark>Data Mining</mark>, and <mark>Artificial Intelligence</mark>. At Hanyang University, I lead the [Information Retrieval and Data Mining Lab.](https://sites.google.com/view/hyudatalab).
  
 # Education Section
 educaton_title: Education
