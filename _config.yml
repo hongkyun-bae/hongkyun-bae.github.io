@@ -26,7 +26,7 @@ cv_username: hkbaeCV
 
 # About Section
 # about_title: About Me
-about_profile_image: images/hkbae.jpg
+about_profile_image: images/hkbae.JPG
 about_content: | # this will include new lines to allow paragraphs
   Hello, I'm Hong-Kyun Bae. I serve as a postdoctoral researcher in the Department of Computer Science at Hanyang University. I earned my B.S. in Computer Science and Engineering from Inha University. In 2023, I had the opportunity to be a visiting scholar at Pennsylvania State University for three months. I completed my Ph.D. in Computer Science from Hanyang University in 2024 under the guidance of Professor Sang-Wook Kim.
   My research focuses on <mark>Recommender Systems</mark>, <mark>Data Mining</mark>, and <mark>Artificial Intelligence</mark>. 
