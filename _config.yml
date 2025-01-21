@@ -1,35 +1,35 @@
 # Site
-repository: Hyunjoon526/hyunjoon526.github.io
+repository: hongkyun-bae/hongkyunbae.github.io
 favicon: images/favicon.ico
 
 # Personal info
-name: Hyunjoon Kim
+name: Hong-Kyun Bae
 title: Assistant Professor
 #email: hjkim@theory.snu.ac.kr
-email: hyunjoonkim@hanyang.ac.kr
-website: hyunjoon526.github.io
-lab: sites.google.com/view/hyudatalab 
+email: hongkyun@hanyang.ac.kr
+website: hongkyunbae.github.io
+#lab: sites.google.com/view/hyudatalab 
 
 # Social links
 #twitter_username: facespics
-github_username:  hyunjoon526
+github_username:  hongkyun-bae
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
 #instagram_username: chillwildlife
-linkedin_username: hyunjoon-kim
+linkedin_username: hong-kyun-bae
 # pinterest_username: jekyll
 #youtube_username: globalmtb
 # googleplus_username: +jekyll
-googlescholar_username: yrPlV5kAAAAJ&hl=en
-cv_username: hjkimCV
+googlescholar_username: pmX6O10AAAAJ&hl=en
+cv_username: hkbaeCV
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+about_profile_image: images/hkbae.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hello, I'm Hyunjoon Kim. I serve as an assistant professor in Department of Data Science at Hanyang University. I received B.S. in Computer Science and Engineering from Seoul National University. In 2020, I received Ph.D. in Computer Science and Engineering at Seoul National University. In 2020-2021, I had worked as a senior developer at SAP Labs Korea.
-  My research interests are <mark>Big Data Analysis</mark>, <mark>Data Mining</mark>, and <mark>Artificial Intelligence</mark>. At Hanyang University, I lead the [Information Retrieval and Data Mining Lab.](https://sites.google.com/view/hyudatalab).
+  Hello, I'm Hong-Kyun Bae. I serve as a postdoctoral researcher in the Department of Computer Science at Hanyang University. I earned my B.S. in Computer Science and Engineering from Inha University. In 2023, I had the opportunity to be a visiting scholar at Pennsylvania State University for three months. I completed my Ph.D. in Computer Science from Hanyang University in 2024 under the guidance of Professor Sang-Wook Kim.
+  My research focuses on <mark>Recommender Systems</mark>, <mark>Data Mining</mark>, and <mark>Artificial Intelligence</mark>. 
  
 # Education Section
 educaton_title: Education
@@ -56,7 +56,7 @@ publications_title: Selected Publications
 footer_show_references: true
 
 # Build settings
-remote_theme: Hyunjoon526/hyunjoon526.github.io
+remote_theme: hongkyun-bae/hongkyunbae.github.io
 
 sass:
   sass_dir: _sass
