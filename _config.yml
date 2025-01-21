@@ -1,6 +1,7 @@
 # Site
 repository: hongkyun-bae/hongkyunbae.github.io
 favicon: images/favicon.ico
+url: https://hongkyunbae.github.io
 
 # Personal info
 name: Hong-Kyun Bae
@@ -22,7 +23,7 @@ linkedin_username: hong-kyun-bae
 #youtube_username: globalmtb
 # googleplus_username: +jekyll
 googlescholar_username: pmX6O10AAAAJ&hl=en
-cv_username: hkbaeCV
+cv_username: hkbae_CV
 
 # About Section
 # about_title: About Me
