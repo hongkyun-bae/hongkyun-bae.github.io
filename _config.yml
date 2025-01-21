@@ -1,14 +1,14 @@
 # Site
-repository: hongkyun-bae/hongkyunbae.github.io
+repository: hongkyun-bae/hongkyun-bae.github.io
 favicon: images/favicon.ico
-url: https://hongkyunbae.github.io
+#url: https://hongkyunbae.github.io
 
 # Personal info
 name: Hong-Kyun Bae
 title: Assistant Professor
 #email: hjkim@theory.snu.ac.kr
 email: hongkyun@hanyang.ac.kr
-website: hongkyunbae.github.io
+website: hongkyun-bae.github.io
 #lab: sites.google.com/view/hyudatalab 
 
 # Social links
@@ -57,7 +57,7 @@ publications_title: Selected Publications
 footer_show_references: true
 
 # Build settings
-remote_theme: hongkyun-bae/hongkyunbae.github.io
+remote_theme: hongkyun-bae/hongkyun-bae.github.io
 
 sass:
   sass_dir: _sass
