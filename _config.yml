@@ -1,18 +1,15 @@
 # Site
 repository: hongkyun-bae/hongkyun-bae.github.io
 favicon: images/favicon.ico
-#url: https://hongkyunbae.github.io
 
 # Personal info
 name: Hong-Kyun Bae
 title: Assistant Professor
-#email: hjkim@theory.snu.ac.kr
 email: hongkyun@hanyang.ac.kr
 website: hongkyun-bae.github.io
-#lab: sites.google.com/view/hyudatalab 
+#lab: sites.google.com/view/ 
 
 # Social links
-#twitter_username: facespics
 github_username:  hongkyun-bae
 # dribbble_username: jekyll
 # facebook_username: jekyll
