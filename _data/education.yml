@@ -1,19 +1,19 @@
 - layout: left
-  name: Seoul National University
-  dates: Sep. 2013 - Aug. 2020
+  name: Hanyang University
+  dates: Sep. 2016 - Aug. 2024
   qualification: #  Ph.D. in computer science and engineering
   quote: >
   description: |+ 
-    - **Ph.D.** in Computer Science and Engineering
+    - **Ph.D.** in Computer Science
     
-    - [Computer Theory and Application Lab](http://theory.snu.ac.kr) (Advisor: Prof. Kunsoo Park)
+    - [Big Data Science Lab](https://bigdas.hanyang.ac.kr/) (Advisor: Prof. Sang-Wook Kim)
     
-    - Thesis: Fast Graph Query Processing Algorithms Using Dynamic Programming
+    - Thesis: Understanding Domain Characteristics for Effective Learning-to-Rank Approaches in Recommender Systems
 - layout: left
-  name: Seoul National University
-  dates: Mar. 2009 - Feb. 2013
+  name: Inha University
+  dates: Mar. 2009 - Aug. 2016
   qualification: # B.S. in computer science and engineering
   quote: >
   description: |+ 
-    - **B.S.** in Computer Science and Engineering (*Summa Cum Laude*)
+    - **B.S.** in Computer Science and Engineering
 
