@@ -1,4 +1,12 @@
 - layout: left
+  company: Kookmin University
+  link: 
+  job_title: 
+  dates: Mar. 2025 - 
+  description: | # this will include new lines to allow paragraphs
+    Assistant Professor at the Department of Computer Science
+
+- layout: left
   company: Hanyang University
   link: 
   job_title: 
