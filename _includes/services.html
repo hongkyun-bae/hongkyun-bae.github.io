@@ -1,0 +1,6 @@
+<div class="container services-container">
+  <h3>{{ site.services_title | default: "Services" }}</h3>
+  {% for service in site.data.services %}
+    {% include {{ service.layout | default: 'left' | append: ".html" }} item=service %}
+  {% endfor %}
+</div>
