@@ -1,6 +1,6 @@
 - layout: left
   name: Hanyang University
-  dates: Sep. 2016 - Aug. 2024
+  dates: Sep. 2016 -- Aug. 2024
   qualification: #  Ph.D. in computer science and engineering
   quote: >
   description: |+ 
@@ -11,7 +11,7 @@
     - Thesis: Understanding Domain Characteristics for Effective Learning-to-Rank (LTR) Approaches in Recommender Systems (*Outstanding Ph.D. Dissertation Award*)
 - layout: left
   name: Inha University
-  dates: Mar. 2009 - Aug. 2016
+  dates: Mar. 2009 -- Aug. 2016
   qualification: # B.S. in computer science and engineering
   quote: >
   description: |+ 
