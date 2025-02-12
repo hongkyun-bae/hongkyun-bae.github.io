@@ -1,5 +1,6 @@
-- layout: top-middle
-  name: 
+- layout: left
+  name: International Conference Proceedings
+  quote: >
   description: |+
     - **Hong-Kyun Bae**, Hae-Ri Jang, Won-Yong Shin, and Sang-Wook Kim. "Ranking Items by the Current-Preferences and Profits: A List-wise Learning-to-Rank Approach to Profit Maximization." **ACM WWW** (*BK21 Top Conference, IF: 4*), 2025 (accepted to appear).  
   
@@ -19,5 +20,9 @@
 
     - Yunyong Ko, Jae-Seo Yu, **Hong-Kyun Bae**, Yongjun Park, Dongwon Lee, and Sang-Wook Kim. "MASCOT: A Quantization Framework for Efficient Matrix Factorization in Recommender Systems." **IEEE ICDM** (*BK21 Top Conference, IF: 3*), 2021.
 
+- layout: left
+  name: International Journals
+  quote: >
+  description: |+
     - **Hong-Kyun Bae**, Hyung-Ook Kim, Won-Yong Shin, and Sang-Wook Kim. "How to Get Consensus with Neighbors?: Rating Standardization for Accurate Collaborative Filtering." **Knowledge-Based Systems** (*SCIE, IF: 7.2 (JCR 2023)*), 2021.
 
