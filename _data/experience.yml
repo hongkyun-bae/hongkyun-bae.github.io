@@ -2,7 +2,7 @@
   company: Kookmin University
   link: 
   job_title: 
-  dates: Mar. 2025 - 
+  dates: Mar. 2025 -- 
   description: | # this will include new lines to allow paragraphs
     Assistant Professor at the Department of Computer Science
 
@@ -10,7 +10,7 @@
   company: Hanyang University
   link: 
   job_title: 
-  dates: Sep. 2024 - Feb. 2025
+  dates: Sep. 2024 -- Feb. 2025
   description: | # this will include new lines to allow paragraphs
     Postdoctoral Researcher at the Department of Computer Science (PI: Prof. Sang-Wook Kim)
 
@@ -18,6 +18,6 @@
   company: Penn State
   link: 
   job_title: 
-  dates: Sep. 2023 - Nov. 2023
+  dates: Sep. 2023 -- Nov. 2023
   description: | # this will include new lines to allow paragraphs
     Visiting Researcher at the College of Information Sciences and Technology (PI: Prof. Dongwon Lee)
