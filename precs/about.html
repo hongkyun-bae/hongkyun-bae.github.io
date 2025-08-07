@@ -1,108 +1,140 @@
-<!-- about.html: Professor introduction page for PRecS Lab -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professor | PRecS Lab</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | PRecS Lab</title>
+
+  <!-- Bootswatch Cosmo Theme -->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cosmo/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS (optional) -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 <body>
-  <header>
-    <h1>Professor</h1>
-    <h2>Dr. Hong-Kyun Bae</h2>
-  </header>
 
-  <nav>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">PRecS Lab</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Professor</a></li>
+        <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="bg-light py-5 text-center border-bottom">
+  <div class="container">
+    <h1 class="fw-bold">Prof. Hong-Kyun Bae</h1>
+    <p class="lead">Assistant Professor, Department of Computer Science, Kookmin University</p>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container my-5">
+
+  <!-- Education -->
+  <section class="mb-5">
+    <h2 class="mb-4">Education</h2>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Hanyang University</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Sep. 2016 – Aug. 2024</h6>
+        <p class="card-text">
+          <strong>Ph.D.</strong> in Computer Science <br>
+          <a href="https://bigdas.hanyang.ac.kr/" target="_blank">Big Data Science Lab</a> (Advisor: Prof. Sang-Wook Kim) <br>
+          Thesis: <em>Understanding Domain Characteristics for Effective Learning-to-Rank (LTR) Approaches in Recommender Systems</em> <br>
+          <span class="badge bg-success">Outstanding Ph.D. Dissertation Award</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Inha University</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Mar. 2009 – Aug. 2016</h6>
+        <p class="card-text">
+          <strong>B.S.</strong> in Computer Science and Engineering
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="mb-5">
+    <h2 class="mb-4">Experience</h2>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Kookmin University</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Mar. 2025 – Present</h6>
+        <p class="card-text">Assistant Professor at the Department of Computer Science</p>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Hanyang University</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Sep. 2024 – Feb. 2025</h6>
+        <p class="card-text">Postdoctoral Researcher (PI: Prof. Sang-Wook Kim)</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Penn State University</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Sep. 2023 – Nov. 2023</h6>
+        <p class="card-text">Visiting Researcher at College of IST (PI: Prof. Dongwon Lee)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section>
+    <h2 class="mb-4">Academic Services</h2>
+
+    <h5 class="mt-4">Program Committee Member</h5>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Professor</a></li>
-      <li><a href="people.html">Members</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li>AAAI 2026</li>
+      <li>IEEE DSAA 2025</li>
+      <li>ACM SAC 2025</li>
     </ul>
-  </nav>
 
-  <main>
-    <section>
-      <h3>About</h3>
-      <p>Dr. Hong-Kyun Bae is an Assistant Professor in the Department of Computer Science at Kookmin University. He leads the PRecS Lab (Personalized Recommender Systems Lab), where his research focuses on artificial intelligence, recommender systems, information retrieval, and learning-to-rank.</p>
-    </section>
+    <h5 class="mt-4">Conference Reviewer</h5>
+    <ul>
+      <li>SIGIR 2024</li>
+      <li>WWW 2024</li>
+      <li>SAC 2024</li>
+      <li>ICDM 2023–2024</li>
+    </ul>
 
-    <section>
-      <h3>Research Interests</h3>
-      <ul>
-        <li>Recommender Systems and Information Retrieval</li>
-        <li>Model Efficiency and Lightweight Architectures</li>
-        <li>Multi-objective Optimization in Ranking</li>
-        <li>Learning-to-Rank (LTR) Algorithms</li>
-      </ul>
-    </section>
+    <h5 class="mt-4">Journal Reviewer</h5>
+    <ul>
+      <li>IEEE Transactions on Services Computing, 2024</li>
+    </ul>
+  </section>
+</main>
 
-    <section>
-      <h3>Education</h3>
-      <ul>
-        <li>
-          <strong>Hanyang University</strong> (Sep. 2016 – Aug. 2024)<br>
-          Ph.D. in Computer Science<br>
-          <a href="https://bigdas.hanyang.ac.kr/" target="_blank">Big Data Science Lab</a> (Advisor: Prof. Sang-Wook Kim)<br>
-          Thesis: <em>Understanding Domain Characteristics for Effective Learning-to-Rank (LTR) Approaches in Recommender Systems</em><br>
-          <u>Outstanding Ph.D. Dissertation Award</u>
-        </li>
-        <li>
-          <strong>Inha University</strong> (Mar. 2009 – Aug. 2016)<br>
-          B.S. in Computer Science and Engineering
-        </li>
-      </ul>
-    </section>
+<!-- Footer -->
+<footer class="bg-light text-center text-muted py-3">
+  <div class="container">
+    <small>© 2025 PRecS Lab | Hong-Kyun Bae (Assistant Professor, Kookmin University)</small>
+  </div>
+</footer>
 
-    <section>
-      <h3>Experience</h3>
-      <ul>
-        <li>
-          <strong>Kookmin University</strong> (Mar. 2025 – )<br>
-          Assistant Professor, Department of Computer Science
-        </li>
-        <li>
-          <strong>Hanyang University</strong> (Sep. 2024 – Feb. 2025)<br>
-          Postdoctoral Researcher, Department of Computer Science (PI: Prof. Sang-Wook Kim)
-        </li>
-        <li>
-          <strong>Penn State</strong> (Sep. 2023 – Nov. 2023)<br>
-          Visiting Researcher, College of Information Sciences and Technology (PI: Prof. Dongwon Lee)
-        </li>
-      </ul>
-    </section>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <section>
-      <h3>Services</h3>
-      <ul>
-        <li>
-          <strong>Program Committee Member</strong><br>
-          AAAI 2025, DSAA 2025, SAC 2025
-        </li>
-        <li>
-          <strong>Conference Reviewer</strong><br>
-          SIGIR 2024, WWW 2024, SAC 2024, ICDM 2023–2024
-        </li>
-        <li>
-          <strong>Journal Reviewer</strong><br>
-          IEEE Transactions on Services Computing, 2024
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Contact</h3>
-      <p><strong>Email:</strong> hongkyun@kookmin.ac.kr<br>
-         <strong>Office:</strong> Room 715, Mirae Hall, Kookmin University<br>
-         <strong>Phone:</strong> +82-2-910-5652</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 PRecS Lab | Hong-Kyun Bae</p>
-  </footer>
 </body>
 </html>
-
