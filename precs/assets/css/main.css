@@ -1,53 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PRecS Lab | Personalized Recommender Systems</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body>
+/* assets/css/main.css */
 
-  <header>
-    <h1>PRecS Lab</h1>
-    <h2>Personalized Recommender Systems Lab @ Kookmin University</h2>
-  </header>
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fdfdfd;
+}
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Professor</a></li>
-      <li><a href="people.html">Members</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+header {
+  background-color: #0b3d91;
+  color: white;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
 
-  <main>
-    <section>
-      <h3>About the Lab</h3>
-      <p>The PRecS Lab focuses on developing AI-based approaches for key challenges in recommender systems and information retrieval. Our main research themes include improving recommendation accuracy, model efficiency, and multi-objective optimization.</p>
-    </section>
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
 
-    <section>
-      <h3>Research Topics</h3>
-      <ul>
-        <li>Enhancing recommendation accuracy and multi-objective optimization</li>
-        <li>Learning-to-Rank (LTR) and user behavior modeling</li>
-        <li>Model lightweighting and real-time recommendation</li>
-      </ul>
-    </section>
+header h2 {
+  font-weight: 400;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
 
-    <section>
-      <h3>Representative Framework</h3>
-      <img src="assets/img/main_framework.png" alt="Recommendation System Framework" width="100%" />
-    </section>
-  </main>
+nav {
+  background: #007c91;
+}
 
-  <footer>
-    <p>&copy; 2025 PRecS Lab | Hong-Kyun Bae (Assistant Professor, Kookmin University)</p>
-  </footer>
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
-</body>
-</html>
+nav ul li {
+  margin: 0;
+}
 
+nav ul li a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #005e6e;
+}
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h3 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
