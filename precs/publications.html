@@ -1,55 +1,140 @@
-<!-- publications.html: Publications page for PRecS Lab -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications | PRecS Lab</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Bootswatch Cosmo Theme -->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cosmo/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 <body>
-  <header>
-    <h1>Publications</h1>
-    <h2>Selected Publications from PRecS Lab</h2>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Professor</a></li>
-      <li><a href="people.html">Members</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="contact.html">Contact</a></li>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">PRecS Lab</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Professor</a></li>
+        <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="bg-light text-center py-5 border-bottom">
+  <div class="container">
+    <h1 class="fw-bold">Publications</h1>
+    <p class="lead">Selected Publications by Prof. Hong-Kyun Bae</p>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container my-5">
+
+  <!-- International Conferences -->
+  <section class="mb-5">
+    <h2 class="mb-4">International Conferences</h2>
+    <ul class="list-group list-group-flush">
+
+      <li class="list-group-item">
+        <strong>Hong-Kyun Bae</strong>, Hae-Ri Jang, Won-Yong Shin, and Sang-Wook Kim. 
+        "Ranking Items by the Current-Preferences and Profits: A List-wise Learning-to-Rank Approach to Profit Maximization." 
+        <em><strong>ACM WWW</strong></em>, 2025. <span class="badge bg-success">Top Conf.</span>
+      </li>
+
+      <li class="list-group-item">
+        <strong>Hong-Kyun Bae</strong>, Yebeen Kim, Hyunjoon Kim, and Sang-Wook Kim. 
+        "Negative Sampling in Next-POI Recommendations: Observation, Approach, and Evaluation." 
+        <em><strong>ACM WWW</strong></em>, 2024. <span class="badge bg-success">Top Conf.</span>
+      </li>
+
+      <li class="list-group-item">
+        <strong>Hong-Kyun Bae</strong>, Hae-Ri Jang, Yang-Sae Moon, and Sang-Wook Kim. 
+        "Item-Ranking Promotion in Recommender Systems." 
+        <em><strong>ACM WWW (Short)</strong></em>, 2024.
+      </li>
+
+      <li class="list-group-item">
+        Jeewon Ahn, <strong>Hong-Kyun Bae</strong>, and Sang-Wook Kim. 
+        "Is the ‘Impression Log’ Beneficial to Evaluating News Recommender Systems? No, it is Not!." 
+        <em><strong>ACM WWW (Short)</strong></em>, 2024.
+      </li>
+
+      <li class="list-group-item">
+        Jeewon Ahn, <strong>Hong-Kyun Bae</strong>, and Sang-Wook Kim. 
+        "Is the Impression Log Beneficial to Effective Model Training in News Recommender Systems? No, It’s NOT." 
+        <em><strong>ACM WWW (Short)</strong></em>, 2023.
+      </li>
+
+      <li class="list-group-item">
+        <strong>Hong-Kyun Bae</strong>, Yeon-Chang Lee, Kyungsik Han, and Sang-Wook Kim. 
+        "A Competition-Aware Approach to Accurate TV Show Recommendation." 
+        <em><strong>IEEE ICDE</strong></em>, 2023. <span class="badge bg-success">Top Conf.</span>
+      </li>
+
+      <li class="list-group-item">
+        <strong>Hong-Kyun Bae</strong>, Jeewon Ahn, Dongwon Lee, and Sang-Wook Kim. 
+        "LANCER: A Lifetime-Aware News Recommender System." 
+        <em><strong>AAAI</strong></em>, 2023. <span class="badge bg-success">Top Conf.</span>
+      </li>
+
+      <li class="list-group-item">
+        Sung-Jun Park, Dong-Kyu Chae, <strong>Hong-Kyun Bae</strong>, Sumin Park, and Sang-Wook Kim. 
+        "Reinforcement Learning over Sentiment-Augmented Knowledge Graphs towards Accurate and Explainable Recommendation." 
+        <em><strong>ACM WSDM</strong></em>, 2022. <span class="badge bg-success">Top Conf.</span>
+      </li>
+
+      <li class="list-group-item">
+        Yunyong Ko, Jae-Seo Yu, <strong>Hong-Kyun Bae</strong>, Yongjun Park, Dongwon Lee, and Sang-Wook Kim. 
+        "MASCOT: A Quantization Framework for Efficient Matrix Factorization in Recommender Systems." 
+        <em><strong>IEEE ICDM</strong></em>, 2021. <span class="badge bg-success">Top Conf.</span>
+      </li>
+
     </ul>
-  </nav>
+  </section>
 
-  <main>
-    <section>
-      <h3>International Conferences</h3>
-      <ul>
-        <li><strong>Hong-Kyun Bae</strong>, Hae-Ri Jang, Won-Yong Shin, and Sang-Wook Kim. "Ranking Items by the Current-Preferences and Profits: A List-wise Learning-to-Rank Approach to Profit Maximization." <em>ACM WWW</em> (BK21 Top Conference, IF: 4), 2025.</li>
-        <li><strong>Hong-Kyun Bae</strong>, Yebeen Kim, Hyunjoon Kim, and Sang-Wook Kim. "Negative Sampling in Next-POI Recommendations: Observation, Approach, and Evaluation." <em>ACM WWW</em> (BK21 Top Conference, IF: 4), 2024.</li>
-        <li><strong>Hong-Kyun Bae</strong>, Hae-Ri Jang, Yang-Sae Moon, and Sang-Wook Kim. "Item-Ranking Promotion in Recommender Systems." <em>ACM WWW (Short)</em>, 2024.</li>
-        <li>Jeewon Ahn, <strong>Hong-Kyun Bae</strong>, and Sang-Wook Kim. "Is the ‘Impression Log’ Beneficial to Evaluating News Recommender Systems? No, it is Not!." <em>ACM WWW (Short)</em>, 2024.</li>
-        <li>Jeewon Ahn, <strong>Hong-Kyun Bae</strong>, and Sang-Wook Kim. "Is the Impression Log Beneficial to Effective Model Training in News Recommender Systems? No, It’s NOT." <em>ACM WWW (Short)</em>, 2023.</li>
-        <li><strong>Hong-Kyun Bae</strong>, Yeon-Chang Lee, Kyungsik Han, and Sang-Wook Kim. "A Competition-Aware Approach to Accurate TV Show Recommendation." <em>IEEE ICDE</em> (BK21 Top Conference, IF: 3), 2023.</li>
-        <li><strong>Hong-Kyun Bae</strong>, Jeewon Ahn, Dongwon Lee, and Sang-Wook Kim. "LANCER: A Lifetime-Aware News Recommender System." <em>AAAI</em> (BK21 Top Conference, IF: 4), 2023.</li>
-        <li>Sung-Jun Park, Dong-Kyu Chae, <strong>Hong-Kyun Bae</strong>, Sumin Park, and Sang-Wook Kim. "Reinforcement Learning over Sentiment-Augmented Knowledge Graphs towards Accurate and Explainable Recommendation." <em>ACM WSDM</em> (BK21 Top Conference, IF: 3), 2022.</li>
-        <li>Yunyong Ko, Jae-Seo Yu, <strong>Hong-Kyun Bae</strong>, Yongjun Park, Dongwon Lee, and Sang-Wook Kim. "MASCOT: A Quantization Framework for Efficient Matrix Factorization in Recommender Systems." <em>IEEE ICDM</em> (BK21 Top Conference, IF: 3), 2021.</li>
-      </ul>
-    </section>
+  <!-- SCIE Journals -->
+  <section>
+    <h2 class="mb-4">International SCIE Journals</h2>
+    <ul class="list-group list-group-flush">
 
-    <section>
-      <h3>International SCIE Journals</h3>
-      <ul>
-        <li><strong>Hong-Kyun Bae</strong>, Jiyeon Kim, Jongwuk Lee, and Sang-Wook Kim. "DUET: Dually Guided Knowledge Distillation from Explicit Feedback." <em>Information Fusion</em> (JCR 2023 IF: 14.8, Top 1%), 2025.</li>
-        <li><strong>Hong-Kyun Bae</strong>, Hyung-Ook Kim, Won-Yong Shin, and Sang-Wook Kim. "How to Get Consensus with Neighbors?: Rating Standardization for Accurate Collaborative Filtering." <em>Knowledge-Based Systems</em> (JCR 2023 IF: 7.2, Top 15%), 2021.</li>
-      </ul>
-    </section>
-  </main>
+      <li class="list-group-item">
+        <strong>Hong-Kyun Bae</strong>, Jiyeon Kim, Jongwuk Lee, and Sang-Wook Kim. 
+        "DUET: Dually Guided Knowledge Distillation from Explicit Feedback." 
+        <em><strong>Information Fusion</strong></em>, 2025. 
+        <span class="badge bg-info">IF 14.8</span>
+      </li>
 
-  <footer>
-    <p>&copy; 2025 PRecS Lab | Hong-Kyun Bae</p>
-  </footer>
+      <li class="list-group-item">
+        <strong>Hong-Kyun Bae</strong>, Hyung-Ook Kim, Won-Yong Shin, and Sang-Wook Kim. 
+        "How to Get Consensus with Neighbors?: Rating Standardization for Accurate Collaborative Filtering." 
+        <em><strong>Knowledge-Based Systems</strong></em>, 2021. 
+        <span class="badge bg-info">IF 7.2</span>
+      </li>
+
+    </ul>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-light text-center text-muted py-3">
+  <div class="container">
+    <small>© 2025 PRecS Lab | Hong-Kyun Bae</small>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
