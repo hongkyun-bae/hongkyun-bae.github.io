@@ -1,4 +1,14 @@
 - layout: left
+  name: Program Committee Member
+  quote: >
+  description: |+
+    - The 40th Annual AAAI Conference on Artificial Intelligence (**AAAI**), 2025.
+    
+    - The 12th IEEE International Conference on Data Science and Advanced Analytics (**DSAA**), 2025.
+
+    - The 40th ACM/SIGAPP Symposium On Applied Computing (**SAC**), 2025.
+    
+- layout: left
   name: Conference Reviewer
   quote: >
   description: |+
@@ -6,7 +16,7 @@
     
     - ACM Web Conference (**WWW**), 2024.
 
-    - ACM/SIGAPP Symposium On Applied Computing (**SAC**), 2024--2025.
+    - ACM/SIGAPP Symposium On Applied Computing (**SAC**), 2024.
     
     - IEEE International Conference on Data Mining (**ICDM**), 2023--2024.
   
