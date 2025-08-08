@@ -16,18 +16,15 @@
 <body>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <!-- container 대신 nav-inner 사용 -->
-    <div class="nav-inner">
-      <a class="navbar-brand" href="index.html">
-        <!-- 로고를 쓰고 싶으면 다음 줄 주석 해제 -->
-        <!-- <img src="assets/images/kookmin_logo.png" alt="Kookmin University Logo" class="brand-logo"> -->
+    <!-- px-3로 좌우 패딩 통일 -->
+    <div class="container px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/images/kookmin_logo.png" alt="Kookmin University Logo" class="brand-logo">
         <span class="fw-semibold">PRecS Lab</span>
       </a>
-  
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
