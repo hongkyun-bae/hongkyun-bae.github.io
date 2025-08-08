@@ -12,31 +12,30 @@
 <!--   <link rel="stylesheet" href="assets/css/main.css" />
 </head> -->
 <body>
-  <!-- Navigation -->
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="assets/images/kookmin_logo.png" alt="Kookmin University Logo" height="40"
-           style="background-color:#fff;border-radius:50%;padding:2px;margin-right:8px;">
-      <span>PRecS Lab</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Professor</a></li>
-        <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
-        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/kookmin_logo.png" alt="Kookmin University Logo" height="40"
+             style="background-color:#fff;border-radius:50%;padding:2px;margin-right:8px;">
+        <span>PRecS Lab</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Professor</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Hero Section -->
   <header class="bg-primary text-white text-center py-5">
@@ -67,195 +66,213 @@
       </p>
     </section>
 
-<style>
-  /* 카드 이미지 오버레이 스타일 */
-  .card-img-overlay-hover {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .card-img-overlay-hover img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  .card-img-overlay-hover:hover img {
-    transform: scale(1.05);
-  }
-  .overlay-text {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    text-align: center;
-    padding: 8px;
-    font-size: 1rem;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-  }
-  .card-img-overlay-hover:hover .overlay-text {
-    opacity: 1;
-  }
+    <style>
+      /* 카드 이미지 오버레이 스타일 */
+      .card-img-overlay-hover {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .card-img-overlay-hover img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+      .card-img-overlay-hover:hover img {
+        transform: scale(1.05);
+      }
+      .overlay-text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        text-align: center;
+        padding: 8px;
+        font-size: 1rem;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+      .card-img-overlay-hover:hover .overlay-text {
+        opacity: 1;
+      }
+    
+      /* Carousel 버튼 색상 보강 */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: rgba(0,0,0,0.6);
+        border-radius: 50%;
+        background-size: 60% 60%;
+      }
+      /* 카드 이미지 오버레이 */
+      .card-img-overlay-link {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border-top-left-radius: .375rem;  /* 카드 라운드와 맞추기 */
+        border-top-right-radius: .375rem;
+      }
+      .card-img-overlay-link img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform .3s ease;
+      }
+      .card-img-overlay-link:hover img {
+        transform: scale(1.05);
+      }
+      .overlay-title {
+        position: absolute;
+        inset: auto 0 0 0; /* bottom full width */
+        background: rgba(var(--bs-primary-rgb), 0.68); /* 부트스트랩 primary 색상 */
+        color: #fff;
+        text-align: center;
+        padding: .6rem .8rem;
+        font-weight: 600;
+        opacity: 1;
+        transition: opacity .25s ease;
+      }
+    /*   .card-img-overlay-link:hover .overlay-title {
+        opacity: 1;
+      } */
+    </style>
 
-  /* Carousel 버튼 색상 보강 */
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 50%;
-    background-size: 60% 60%;
-  }
-  /* 카드 이미지 오버레이 */
-  .card-img-overlay-link {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    cursor: pointer;
-    border-top-left-radius: .375rem;  /* 카드 라운드와 맞추기 */
-    border-top-right-radius: .375rem;
-  }
-  .card-img-overlay-link img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform .3s ease;
-  }
-  .card-img-overlay-link:hover img {
-    transform: scale(1.05);
-  }
-  .overlay-title {
-    position: absolute;
-    inset: auto 0 0 0; /* bottom full width */
-    background: rgba(var(--bs-primary-rgb), 0.68); /* 부트스트랩 primary 색상 */
-    color: #fff;
-    text-align: center;
-    padding: .6rem .8rem;
-    font-weight: 600;
-    opacity: 1;
-    transition: opacity .25s ease;
-  }
-/*   .card-img-overlay-link:hover .overlay-title {
-    opacity: 1;
-  } */
-</style>
-
-<section id="research" class="py-3 bg-light">
-  <div class="container">
-    <h3 class="mb-4">Key Achievements</h3>
-
-    <div id="topicsCarousel" class="carousel slide" data-bs-ride="false">
-      <div class="carousel-inner">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row g-3">
-            <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
-              <div class="card shadow-sm h-100 flex-fill">
-                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/25530" target="_blank" class="card-img-overlay-hover">
-                  <img src="assets/images/topic1.jpg" alt="Accuracy">
-                  <div class="overlay-text">News Recommender Systems</div>
-                </a>
-                <div class="card-body d-flex flex-column">
-                  <p class="card-text mt-auto">
-                    Modeling user behavior with advanced ranking losses (AAAI 2023).
-                  </p>
+    <section id="research" class="py-3 bg-light">
+      <div class="container">
+        <h3 class="mb-4">Key Achievements</h3>
+    
+        <div id="topicsCarousel" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner">
+    
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-3">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <div class="card shadow-sm h-100 flex-fill">
+                    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/25530" target="_blank" class="card-img-overlay-hover">
+                      <img src="assets/images/topic1.jpg" alt="Accuracy">
+                      <div class="overlay-text">News Recommender Systems</div>
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                      <p class="card-text mt-auto">
+                        Modeling user behavior with advanced ranking losses (AAAI 2023).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <div class="card shadow-sm h-100 flex-fill">
+                    <a href="https://doi.org/10.1145/3589334.3645681" target="_blank" class="card-img-overlay-hover">
+                      <img src="assets/images/topic2.jpg" alt="LTR">
+                      <div class="overlay-text">POI Recommender Systems</div>
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                      <p class="card-text mt-auto">
+                        The improved negative sampling method for a pair-wise LTR technique (WWW 2024).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <div class="card shadow-sm h-100 flex-fill">
+                    <a href="https://doi.org/10.1145/3696410.3714731" target="_blank" class="card-img-overlay-hover">
+                      <img src="assets/images/topic3.jpg" alt="Lightweight">
+                      <div class="overlay-text">Multi-Objective Optimization</div>
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                      <p class="card-text mt-auto">
+                        A list-wise LTR method for multi-objective optimization (WWW 2025).
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Card 2 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
-              <div class="card shadow-sm h-100 flex-fill">
-                <a href="https://doi.org/10.1145/3589334.3645681" target="_blank" class="card-img-overlay-hover">
-                  <img src="assets/images/topic2.jpg" alt="LTR">
-                  <div class="overlay-text">POI Recommender Systems</div>
-                </a>
-                <div class="card-body d-flex flex-column">
-                  <p class="card-text mt-auto">
-                    The improved negative sampling method for a pair-wise LTR technique (WWW 2024).
-                  </p>
+    
+            <!-- Slide 2 (추가 카드들) -->
+            <div class="carousel-item">
+              <div class="row g-3">
+                <!-- 다른 카드들 동일한 구조 -->
+                <!-- Card 4 -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <div class="card shadow-sm h-100 flex-fill">
+                    <a href="https://ieeexplore.ieee.org/document/10184833" target="_blank" class="card-img-overlay-hover">
+                      <img src="assets/images/topic4.jpg" alt="Accuracy">
+                      <div class="overlay-text">Broadcasting Show Recommender Systems</div>
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                      <p class="card-text mt-auto">
+                        A competition-aware modeling for the broadcasting recommender system (IEEE ICDE 2023).
+                      </p>
+                    </div>
+                  </div>
                 </div>
+    
+                <!-- Card 5 -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <div class="card shadow-sm h-100 flex-fill">
+                    <a href="https://doi.org/10.1145/3589335.3651529" target="_blank" class="card-img-overlay-hover">
+                      <img src="assets/images/topic5.jpg" alt="LTR">
+                      <div class="overlay-text">Profie-aware Recommender Systems</div>
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                      <p class="card-text mt-auto">
+                        Ranking promotion for profitable items to maximize the platform's profits (WWW 2024 Poster).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
               </div>
             </div>
-
-            <!-- Card 3 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
-              <div class="card shadow-sm h-100 flex-fill">
-                <a href="https://doi.org/10.1145/3696410.3714731" target="_blank" class="card-img-overlay-hover">
-                  <img src="assets/images/topic3.jpg" alt="Lightweight">
-                  <div class="overlay-text">Multi-Objective Optimization</div>
-                </a>
-                <div class="card-body d-flex flex-column">
-                  <p class="card-text mt-auto">
-                    A list-wise LTR method for multi-objective optimization (WWW 2025).
-                  </p>
-                </div>
-              </div>
-            </div>
+    
           </div>
+    
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#topicsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#topicsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
-
-        <!-- Slide 2 (추가 카드들) -->
-        <div class="carousel-item">
-          <div class="row g-3">
-            <!-- 다른 카드들 동일한 구조 -->
-            <!-- Card 4 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
-              <div class="card shadow-sm h-100 flex-fill">
-                <a href="https://ieeexplore.ieee.org/document/10184833" target="_blank" class="card-img-overlay-hover">
-                  <img src="assets/images/topic4.jpg" alt="Accuracy">
-                  <div class="overlay-text">Broadcasting Show Recommender Systems</div>
-                </a>
-                <div class="card-body d-flex flex-column">
-                  <p class="card-text mt-auto">
-                    A competition-aware modeling for the broadcasting recommender system (IEEE ICDE 2023).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
-              <div class="card shadow-sm h-100 flex-fill">
-                <a href="https://doi.org/10.1145/3589335.3651529" target="_blank" class="card-img-overlay-hover">
-                  <img src="assets/images/topic5.jpg" alt="LTR">
-                  <div class="overlay-text">Profie-aware Recommender Systems</div>
-                </a>
-                <div class="card-body d-flex flex-column">
-                  <p class="card-text mt-auto">
-                    Ranking promotion for profitable items to maximize the platform's profits (WWW 2024 Poster).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
       </div>
-
-      <!-- Carousel Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#topicsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#topicsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!-- News -->
+    <style>
+      /* 뉴스 항목 hover 효과 */
+      .news-link {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.2s ease, text-decoration 0.2s ease;
+      }
+      .news-link:hover {
+        color: #0d6efd; /* 부트스트랩 primary 색상 */
+        text-decoration: underline;
+      }
+    </style>
     <section>
       <h3 class="mb-3 mt-5">News</h3>
       <ul>
-        <li><strong>Ongoing</strong> – Recruiting graduate and undergraduate researchers (M.S./Ph.D./B.S.)</li>        
-        <li><strong>2025.08.08</strong> – Launch of the PRecS Lab official website</li>
+        <li><strong>August 2025</strong> – Official launch of the PRecS Lab website</li>
+        <li><strong>July 2025</strong> – 
+          <a href="members.html" class="news-link">
+            Minji Jeong (정민지) and Minkyo Jeong (정민교) joined PRecS Lab as undergraduate research interns
+          </a>
+        </li>
+        <li><strong>July 2025</strong> – Establishment of PRecS Lab at Kookmin University</li>
       </ul>
     </section>
+
   </main>
 
   <!-- Footer -->
