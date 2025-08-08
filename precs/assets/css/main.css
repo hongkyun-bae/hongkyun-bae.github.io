@@ -1,17 +1,29 @@
 /* assets/css/main.css */
 
-/* 통일된 브랜드 정렬/여백 */
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;              /* 로고와 텍스트 간격 */
-}
-.navbar-brand img {
+/* 로고 크기/여백 통일 */
+.brand-logo {
   height: 40px;
-  width: auto;
-  background: #fff;
+  width: 40px;
   border-radius: 50%;
+  background: #fff;
   padding: 2px;
   display: block;
 }
 
+/* 네비바 좌우 패딩 완전 동일화 (container px-3와 매칭) */
+.navbar .container {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+/* 브랜드 좌측 들여쓰기/줄맞춤 보정 */
+.navbar-brand {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  line-height: 1; /* 폰트/아이콘 로딩 시 지터 방지 */
+}
+
+/* 모바일 토글 상태에서도 동일 간격 유지 */
+.navbar-toggler {
+  margin-left: 0;
+}
