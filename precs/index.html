@@ -18,10 +18,10 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="#">
       <a href="https://cs.kookmin.ac.kr/" target="_blank" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="assets/images/kookmin_logo.png" alt="Kookmin University Logo" height="40"
+        <img src="assets/images/Signature_KMU4.jpg" alt="Kookmin University Logo" height="40"
              style="background-color: white; border-radius: 50%; padding: 2px; margin-right: 8px;">
       </a>
-      <span>PRecS Lab</span>
+      <span><strong>PRecS Lab</strong></span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,47 +100,220 @@
       </ul>
     </section> -->
 
-    <section id="research" class="py-3 bg-light">
+<!--     <section id="research" class="py-3 bg-light">
     <div class="container">
       <h3 class="mb-4">Research Topics</h3>
         <div class="row">
 
-      <!-- Card 1 -->
-      <div class="col-md-4 mb-3">
-        <div class="card shadow-sm h-100">
-          <img src="assets/images/topic1.png" class="card-img-top" alt="Recommendation Accuracy">
-          <div class="card-body">
-            <h5 class="card-title">Accuracy & Multi-Objective Optimization</h5>
-            <p class="card-text">Improving recommendation quality while balancing accuracy, fairness, novelty, and diversity.</p>
+          <!-- Card 1 -->
+          <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100">
+              <img src="assets/images/topic1.png" class="card-img-top" alt="Recommendation Accuracy">
+              <div class="card-body">
+                <h5 class="card-title">Accuracy & Multi-Objective Optimization</h5>
+                <p class="card-text">Improving recommendation quality while balancing accuracy, fairness, novelty, and diversity.</p>
+              </div>
+            </div>
           </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100">
+              <img src="assets/images/topic2.png" class="card-img-top" alt="LTR Techniques">
+              <div class="card-body">
+                <h5 class="card-title">Learning-to-Rank (LTR)</h5>
+                <p class="card-text">Refining user behavior modeling with advanced ranking loss and sequential context awareness.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100">
+              <img src="assets/images/topic3.png" class="card-img-top" alt="Lightweight Model">
+              <div class="card-body">
+                <h5 class="card-title">Model Lightweighting</h5>
+                <p class="card-text">Enabling real-time personalized recommendations with compact and efficient architectures.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section> -->
 
-      <!-- Card 2 -->
-      <div class="col-md-4 mb-3">
-        <div class="card shadow-sm h-100">
-          <img src="assets/images/topic2.png" class="card-img-top" alt="LTR Techniques">
-          <div class="card-body">
-            <h5 class="card-title">Learning-to-Rank (LTR)</h5>
-            <p class="card-text">Refining user behavior modeling with advanced ranking loss and sequential context awareness.</p>
+<style>
+  /* 카드 이미지 오버레이 스타일 */
+  .card-img-overlay-hover {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .card-img-overlay-hover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .card-img-overlay-hover:hover img {
+    transform: scale(1.05);
+  }
+  .overlay-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .card-img-overlay-hover:hover .overlay-text {
+    opacity: 1;
+  }
+  /* 카드 이미지 오버레이 */
+  .card-img-overlay-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border-top-left-radius: .375rem;  /* 카드 라운드와 맞추기 */
+    border-top-right-radius: .375rem;
+  }
+  .card-img-overlay-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .3s ease;
+  }
+  .card-img-overlay-link:hover img {
+    transform: scale(1.05);
+  }
+  .overlay-title {
+    position: absolute;
+    inset: auto 0 0 0; /* bottom full width */
+    background: rgba(var(--bs-primary-rgb), 0.68); /* 부트스트랩 primary 색상 */
+    color: #fff;
+    text-align: center;
+    padding: .6rem .8rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity .25s ease;
+  }
+  .card-img-overlay-link:hover .overlay-title {
+    opacity: 1;
+  }
+</style>
+
+<section id="research" class="py-3 bg-light">
+  <div class="container">
+    <h3 class="mb-4">Key Achievements</h3>
+
+    <div id="topicsCarousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row g-3">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+              <div class="card shadow-sm h-100 flex-fill">
+                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/25530" target="_blank" class="card-img-overlay-hover">
+                  <img src="assets/images/topic1.jpg" alt="Accuracy">
+                  <div class="overlay-text">News Recommender Systems</div>
+                </a>
+                <div class="card-body d-flex flex-column">
+                  <p class="card-text mt-auto">
+                    Refining user behavior modeling with advanced ranking losses (presented at AAAI 2023).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+              <div class="card shadow-sm h-100 flex-fill">
+                <a href="https://doi.org/10.1145/3589334.3645681" target="_blank" class="card-img-overlay-hover">
+                  <img src="assets/images/topic2.jpg" alt="LTR">
+                  <div class="overlay-text">POI Recommender Systems</div>
+                </a>
+                <div class="card-body d-flex flex-column">
+                  <p class="card-text mt-auto">
+                    Improving a pair-wise LTR technique by considering the domain-specific characteristics (presented at WWW 2024).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+              <div class="card shadow-sm h-100 flex-fill">
+                <a href="https://doi.org/10.1145/3696410.3714731" target="_blank" class="card-img-overlay-hover">
+                  <img src="assets/images/topic3.jpg" alt="Lightweight">
+                  <div class="overlay-text">Multi-Objective Optimization</div>
+                </a>
+                <div class="card-body d-flex flex-column">
+                  <p class="card-text mt-auto">
+                    Proposing a list-wise LTR method for multi-objective optimization (presented at WWW 2025).
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="col-md-4 mb-3">
-        <div class="card shadow-sm h-100">
-          <img src="assets/images/topic3.png" class="card-img-top" alt="Lightweight Model">
-          <div class="card-body">
-            <h5 class="card-title">Model Lightweighting</h5>
-            <p class="card-text">Enabling real-time personalized recommendations with compact and efficient architectures.</p>
+        <!-- Slide 2 (추가 카드들) -->
+        <div class="carousel-item">
+          <div class="row g-3">
+            <!-- 다른 카드들 동일한 구조 -->
+            <!-- Card 4 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+              <div class="card shadow-sm h-100 flex-fill">
+                <a href="https://ieeexplore.ieee.org/document/10184833" target="_blank" class="card-img-overlay-hover">
+                  <img src="assets/images/topic4.jpg" alt="Accuracy">
+                  <div class="overlay-text">Broadcasting Show Recommender Systems</div>
+                </a>
+                <div class="card-body d-flex flex-column">
+                  <p class="card-text mt-auto">
+                    Enabling user modeling with a competition-aware characteristic of the broadcasting system (presented at ICDE 2023).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+              <div class="card shadow-sm h-100 flex-fill">
+                <a href="https://doi.org/10.1145/3589335.3651529" target="_blank" class="card-img-overlay-hover">
+                  <img src="assets/images/topic5.jpg" alt="LTR">
+                  <div class="overlay-text">Profie-aware Recommender Systems</div>
+                </a>
+                <div class="card-body d-flex flex-column">
+                  <p class="card-text mt-auto">
+                    Boosting the rankings of profitable items to maximize the platform's profits (presented at WWW 2024 Poster).
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+
       </div>
 
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#topicsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#topicsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
   </div>
 </section>
+
 
     <!-- News -->
     <section>
