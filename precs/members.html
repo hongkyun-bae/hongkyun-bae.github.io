@@ -44,33 +44,56 @@
   </div>
 </header>
 
+<style>
+  /* 멤버 카드 공통 스타일 */
+  .member-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* 카드 높이 동일하게 */
+  }
+  .member-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* 사진 높이 제한 */
+    object-fit: cover; /* 비율 유지하며 잘림 */
+  }
+  .member-card-body {
+    flex: 1; /* 텍스트 부분이 동일한 높이 차지 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 아래쪽까지 균등 배치 */
+  }
+</style>
+  
 <!-- Member Cards -->
 <main class="container my-5">
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col">
-      <div class="card h-100 shadow-sm">
-      <img src="assets/images/minji_jeong.jpeg" class="card-img-top p-3" alt="Member Photo" />
-        <div class="card-body">
-          <h5 class="card-title">Minji Jeong (정민지)</h5>
-          <h6 class="card-subtitle text-muted mb-2">B.S. Student</h6>
-          <p class="card-text">Research Interests: Recommender Systems</p>
-        </div>
-        <div class="card-footer">
-          <small>Email: <a href="mailto:wjdalswl6756@kookmin.ac.kr">wjdalswl6756@kookmin.ac.kr</a></small>
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card member-card shadow-sm">
+        <img src="assets/images/minji_jeong.jpeg" alt="Minji Jeong" />
+        <div class="card-body member-card-body">
+          <div>
+            <h5 class="card-title">Minji Jeong (정민지)</h5>
+            <p class="card-text">B.S. Student</p>
+            <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
+          </div>
+          <p class="card-text">
+            <small>Email: <a href="mailto:wjldalswl6756@kookmin.ac.kr">wjldalswl6756@kookmin.ac.kr</a></small>
+          </p>
         </div>
       </div>
     </div>
-
-    <div class="col">
-      <div class="card h-100 shadow-sm">
-      <img src="assets/images/minkyo_jeong.jpeg" class="card-img-top p-3" alt="Member Photo" />
-        <div class="card-body">
-          <h5 class="card-title">Minkyo Jeong (정민교)</h5>
-          <h6 class="card-subtitle text-muted mb-2">B.S. Student</h6>
-          <p class="card-text">Research Interests: Recommender Systems</p>
-        </div>
-        <div class="card-footer">
-          <small>Email: <a href="mailto:andydoctor@kookmin.ac.kr">andydoctor@kookmin.ac.kr</a></small>
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card member-card shadow-sm">
+        <img src="assets/images/minkyo_jeong.jpeg" alt="Minkyo Jeong" />
+        <div class="card-body member-card-body">
+          <div>
+            <h5 class="card-title">Minkyo Jeong (정민교)</h5>
+            <p class="card-text">B.S. Student</p>
+            <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
+          </div>
+          <p class="card-text">
+            <small>Email: <a href="mailto:andydoctor@kookmin.ac.kr">andydoctor@kookmin.ac.kr</a></small>
+          </p>
         </div>
       </div>
     </div>
