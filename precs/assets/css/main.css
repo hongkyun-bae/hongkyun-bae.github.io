@@ -51,3 +51,19 @@
 .navbar {
   --bs-navbar-padding-x: 0;
 }
+
+.hero-header {
+  background-image: url('assets/images/kookmin_bg.jpg'); /* 전경 사진 경로 */
+  background-size: cover;      /* 화면 꽉 채우기 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat;
+  min-height: 250px;           /* 높이 */
+  display: flex;
+  align-items: center;         /* 수직 가운데 정렬 */
+}
+
+.hero-header .container {
+  background: rgba(0, 0, 0, 0.4); /* 글자 가독성을 위한 반투명 배경 */
+  padding: 2rem;
+  border-radius: 8px;
+}
