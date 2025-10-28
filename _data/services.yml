@@ -2,7 +2,9 @@
   name: Program Committee Member
   quote: >
   description: |+
-    - The 40th Annual AAAI Conference on Artificial Intelligence (**AAAI**), 2025.
+    - The 40th Annual AAAI Conference on Artificial Intelligence (**AAAI**), 2026.
+
+    - The 41th ACM/SIGAPP Symposium On Applied Computing (**SAC**), 2026.
     
     - The 12th IEEE International Conference on Data Science and Advanced Analytics (**DSAA**), 2025.
 
@@ -24,4 +26,5 @@
   name: Journal Reviewer
   quote: >
   description: |+
+    - Data Science and Engineering, 2025.
     - IEEE Transactions on Services Computing, 2024.
