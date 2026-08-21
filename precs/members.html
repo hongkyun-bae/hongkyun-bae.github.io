@@ -4,32 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Members | PRecS Lab</title>
-
   <!-- Bootswatch Cosmo Theme -->
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cosmo/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
-
-
   <style>
     /* 공통 아바타 컨테이너: 타원형 */
     .avatar-oval {
-      width: 220px;          /* 가로 크기 */
-      height: 280px;         /* 세로 크기 → 타원 느낌 (원은 width=height로) */
+      width: 220px;   /* 가로 크기 */
+      height: 280px;  /* 세로 크기 → 타원 느낌 (원은 width=height로) */
       border-radius: 50% / 60%;
       overflow: hidden;
       background: #fff;
       box-shadow: 0 6px 18px rgba(0,0,0,.12);
       border: 1px solid rgba(0,0,0,.06);
     }
-    
     /* 실제 이미지: 비율 유지 + 중앙 맞춤 */
     .avatar-oval img {
       width: 100%;
       height: 100%;
-      object-fit: cover;        /* 꽉 채우되 비율 유지 */
-      object-position: 50% 20%; /* 초점을 약간 위로(눈이 잘리지 않게) */
+      object-fit: cover;          /* 꽉 채우되 비율 유지 */
+      object-position: 50% 20%;   /* 초점을 약간 위로(눈이 잘리지 않게) */
     }
-    
     /* 원형 버전이 필요할 때 */
     .avatar-circle {
       width: 220px;
@@ -48,265 +43,287 @@
     }
   </style>
 </head>
-  
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <!-- px-3로 좌우 패딩 통일 -->
-  <div class="container px-3">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-      <img src="assets/images/kookmin_logo.png" alt="Kookmin University Logo" class="brand-logo">
-      <span class="fw-semibold">PRecS Lab</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Professor</a></li>
-        <li class="nav-item"><a class="nav-link active" href="members.html">Members</a></li>
-        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>  
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-<!-- Header -->
-<header class="bg-light text-center py-5 border-bottom">
-  <div class="container">
-    <h1 class="fw-bold">Lab Members</h1>
-    <p class="lead">Researchers of the PRecS Lab</p>
-  </div>
-</header>
-
-<style>
-  .member-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  .member-card .card-body {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.5rem;
-  }
-  .member-card .card-body > p:last-child {
-    margin-top: auto; /* 이메일 줄을 카드 하단으로 밀어 맞춤 */
-  }
-</style>
-  
-<!-- Member Cards -->
-<main class="container my-5">
-  <!-- 그리드 래퍼 추가 -->
-  <div class="row g-4 justify-content-start">
-
-    <!-- Card 1 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/minji_jeong.jpeg" alt="Minji Jeong">
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">Minji Jeong (정민지)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
-          <p class="card-text"><small>Email: <a href="mailto:wjdalswl6756@kookmin.ac.kr">wjdalswl6756@kookmin.ac.kr</a></small></p>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- px-3로 좌우 패딩 통일 -->
+    <div class="container px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/images/kookmin_logo.png" alt="Kookmin University Logo" class="brand-logo">
+        <span class="fw-semibold">PRecS Lab</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Professor</a></li>
+          <li class="nav-item"><a class="nav-link active" href="members.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <!-- Card 2 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/minkyo_jeong.jpeg" alt="Minkyo Jeong">
+  <!-- Header -->
+  <header class="bg-light text-center py-5 border-bottom">
+    <div class="container">
+      <h1 class="fw-bold">Lab Members</h1>
+      <p class="lead">Researchers of the PRecS Lab</p>
+    </div>
+  </header>
+
+  <style>
+    .member-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .member-card .card-body {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
+    }
+    .member-card .card-body > p:last-child {
+      margin-top: auto; /* 이메일 줄을 카드 하단으로 밀어 맞춤 */
+    }
+    /* 구성원 그룹 제목 */
+    .member-group-title {
+      font-weight: 700;
+      border-bottom: 2px solid var(--bs-primary);
+      padding-bottom: .5rem;
+      margin-bottom: 1.5rem;
+    }
+    .member-group-title .count {
+      font-size: .9rem;
+      font-weight: 500;
+      color: #6c757d;
+      margin-left: .5rem;
+    }
+  </style>
+
+  <!-- Member Cards -->
+  <main class="container my-5">
+
+    <!-- ================= M.S. Students ================= -->
+    <section class="mb-5">
+      <h2 class="member-group-title">M.S. Students (석사과정)<span class="count">2</span></h2>
+
+      <div class="row g-4 justify-content-start">
+
+        <!-- MS 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/minji_jeong.jpeg" alt="Minji Jeong">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Minji Jeong (정민지)</h5>
+              <p class="card-text">M.S. Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
+              <p class="card-text"><small>Email: <a href="mailto:wjdalswl6756@kookmin.ac.kr">wjdalswl6756@kookmin.ac.kr</a></small></p>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">Minkyo Jeong (정민교)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
-          <p class="card-text"><small>Email: <a href="mailto:andydoctor@kookmin.ac.kr">andydoctor@kookmin.ac.kr</a></small></p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Card 3 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/hyunwoo_song.jpg" alt="Hyunwoo Song">
+        <!-- MS 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/hyunwoo_song.jpg" alt="Hyunwoo Song">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Hyunwoo Song (송현우)</h5>
+              <p class="card-text">M.S. Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Recommender Systems, Data Analysis</p>
+              <p class="card-text">
+                <small>Email: <a href="mailto:hwstage@kookmin.ac.kr">hwstage@kookmin.ac.kr</a></small>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">Hyunwoo Song (송현우)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Recommender Systems, Data Analysis</p>
-          <p class="card-text">
-            <small>Email: <a href="mailto:hwstage@kookmin.ac.kr">hwstage@kookmin.ac.kr</a></small>
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Card 4 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/seongjae_lee.jpg" alt="Seongjae Lee">
+
+      </div> <!-- /row -->
+    </section>
+
+    <!-- ============ Undergraduate Researchers ============ -->
+    <section>
+      <h2 class="member-group-title">Undergraduate Researchers (학부연구생)<span class="count">8</span></h2>
+
+      <div class="row g-4 justify-content-start">
+
+        <!-- UG 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/minkyo_jeong.jpeg" alt="Minkyo Jeong">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Minkyo Jeong (정민교)</h5>
+              <p class="card-text">Undergraduate Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
+              <p class="card-text"><small>Email: <a href="mailto:andydoctor@kookmin.ac.kr">andydoctor@kookmin.ac.kr</a></small></p>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">Seongjae Lee (이성재)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Learning-to-Rank Optimization</p>
-          <p class="card-text">
-            <small>Email: <a href="mailto:dpqb211@kookmin.ac.kr">dpqb211@kookmin.ac.kr</a></small>
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Card 5 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/iyeon_han.jpg" alt="Iyeon Han">
+
+        <!-- UG 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/seongjae_lee.jpg" alt="Seongjae Lee">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Seongjae Lee (이성재)</h5>
+              <p class="card-text">Undergraduate Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Learning-to-Rank Optimization</p>
+              <p class="card-text">
+                <small>Email: <a href="mailto:dpqb211@kookmin.ac.kr">dpqb211@kookmin.ac.kr</a></small>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">Iyeon Han (한이연)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
-          <p class="card-text">
-            <small>Email: <a href="mailto:docherryra@gmail.com">docherryra@gmail.com</a></small>
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Card 6 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/minyong_jung.jpg" alt="Minyong Jung">
+
+        <!-- UG 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/iyeon_han.jpg" alt="Iyeon Han">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Iyeon Han (한이연)</h5>
+              <p class="card-text">Undergraduate Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
+              <p class="card-text">
+                <small>Email: <a href="mailto:docherryra@gmail.com">docherryra@gmail.com</a></small>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">Minyong Jung (정민용)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
-          <p class="card-text">
-            <small>Email: <a href="mailto:my2002629@kookmin.ac.kr">my2002629@kookmin.ac.kr</a></small>
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Card 7 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/junseong_lee.jpeg" alt="Junseong Lee">
+        <!-- UG 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/minyong_jung.jpg" alt="Minyong Jung">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Minyong Jung (정민용)</h5>
+              <p class="card-text">Undergraduate Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
+              <p class="card-text">
+                <small>Email: <a href="mailto:my2002629@kookmin.ac.kr">my2002629@kookmin.ac.kr</a></small>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">Junseong Lee (이준성)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
-          <p class="card-text">
-            <small>Email: <a href="mailto:kb091508@kookmin.ac.kr">kb091508@kookmin.ac.kr</a></small>
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Card 8 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/yeomin_baek.jpg" alt="Yeomin Baek">
+        <!-- UG 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/junseong_lee.jpeg" alt="Junseong Lee">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Junseong Lee (이준성)</h5>
+              <p class="card-text">Undergraduate Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
+              <p class="card-text">
+                <small>Email: <a href="mailto:kb091508@kookmin.ac.kr">kb091508@kookmin.ac.kr</a></small>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">Yeomin Baek (백여민)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
-          <p class="card-text">
-            <small>Email: <a href="mailto:yeomin100@kookmin.ac.kr">yeomin100@kookmin.ac.kr</a></small>
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Card 9 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/jeonghyeon_shin.jpg" alt="JeongHyeon Shin">
+        <!-- UG 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/yeomin_baek.jpg" alt="Yeomin Baek">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Yeomin Baek (백여민)</h5>
+              <p class="card-text">Undergraduate Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
+              <p class="card-text">
+                <small>Email: <a href="mailto:yeomin100@kookmin.ac.kr">yeomin100@kookmin.ac.kr</a></small>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">JeongHyeon Shin (신정현)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Recommender Systems, Mobile Edge Computing</p>
-          <p class="card-text">
-            <small>Email: <a href="mailto:hinb102@kookmin.ac.kr">hinb102@kookmin.ac.kr</a></small>
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Card 10 -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card member-card shadow-sm h-100">
-        <div class="text-center pt-4">
-          <div class="avatar-oval mx-auto">
-            <img src="assets/images/eunseo_cho.jpg" alt="Eunseo Cho">
+        <!-- UG 7 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/jeonghyeon_shin.jpg" alt="JeongHyeon Shin">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">JeongHyeon Shin (신정현)</h5>
+              <p class="card-text">Undergraduate Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Recommender Systems, Mobile Edge Computing</p>
+              <p class="card-text">
+                <small>Email: <a href="mailto:hinb102@kookmin.ac.kr">hinb102@kookmin.ac.kr</a></small>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title mt-3">Eunseo Cho (조은서)</h5>
-          <p class="card-text">Undergraduate Student</p>
-          <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
-          <p class="card-text">
-            <small>Email: <a href="mailto:escho94@kookmin.ac.kr">escho94@kookmin.ac.kr</a></small>
-          </p>
+
+        <!-- UG 8 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card member-card shadow-sm h-100">
+            <div class="text-center pt-4">
+              <div class="avatar-oval mx-auto">
+                <img src="assets/images/eunseo_cho.jpg" alt="Eunseo Cho">
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Eunseo Cho (조은서)</h5>
+              <p class="card-text">Undergraduate Student</p>
+              <p class="card-text"><strong>Research Interests:</strong> Recommender Systems</p>
+              <p class="card-text">
+                <small>Email: <a href="mailto:escho94@kookmin.ac.kr">escho94@kookmin.ac.kr</a></small>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+
+      </div> <!-- /row -->
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-3 mt-5">
+    <div class="container">
+      <small>© 2025 PRecS Lab | Kookmin University</small>
     </div>
+  </footer>
 
-
-  </div> <!-- /row -->
-</main>
-
-
-<!-- Footer -->
-<footer class="bg-light text-center text-muted py-3 mt-5">
-  <div class="container">
-    <small>© 2025 PRecS Lab | Kookmin University</small>
-  </div>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
