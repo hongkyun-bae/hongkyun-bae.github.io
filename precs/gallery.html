@@ -69,6 +69,7 @@
           <li class="nav-item"><a class="nav-link" href="about.html">Professor</a></li>
           <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
           <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="patents.html">Patents</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
           <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
@@ -85,7 +86,7 @@
     </div>
   </header>
 
-  <!-- Main : 행사 목록이 여기에 자동으로 그려집니다 -->
+  <!-- Main -->
   <main class="container my-5" id="galleryRoot"></main>
 
   <!-- 확대 보기 모달 -->
@@ -113,32 +114,33 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- ===================================================================
-       행사가 생길 때마다 아래 EVENTS 배열 맨 위에 한 덩어리만 추가하면 됩니다.
-         1) assets/images/gallery/ 아래에 행사 폴더를 만들고 사진 업로드
+         1) assets/images/gallery/ 아래에 행사 폴더 생성 후 사진 업로드
             예) assets/images/gallery/2026-08-19-graduation/1.jpg, 2.jpg, ...
          2) 아래에 { date, title, dir, photos } 객체 추가
-       배열 위쪽이 화면 위쪽(최신순)입니다. HTML은 손댈 필요 없습니다.
+       배열 위쪽이 화면 위쪽 (최신순)
        =================================================================== -->
   <script>
     const EVENTS = [
       {
-        date:   "2026.08.19",
-        title:  "졸업식 (Commencement)",
-        dir:    "assets/images/gallery/2026-08-19-graduation",
-        photos: ["1.jpg", "2.jpg", "3.jpg"]
+        date:   "2026.01.30",
+        title:  "한국소프트웨어종합학술대회 (KSC) 학부생/주니어 논문경진대회 장려상 수상",
+        note:   "RecPrompt++: 개인화된 셀프-튜닝 프롬프트 엔지니어링 기법을 이용한 효과적인 뉴스 추천 프레임워크 (정민지, 정민교)",
+        dir:    "assets/images/gallery",
+        photos: ["260130_1.png", "260130_2.jpg", "260130_3.PNG"]
       },
       {
-        date:   "2026.04.05",
-        title:  "연구실 회식 (Lab Dinner)",
-        dir:    "assets/images/gallery/2026-04-05-dinner",
-        photos: ["1.jpg", "2.jpg"]
-      },
+        date:   "2025.12.16",
+        title:  "한국소프트웨어종합학술대회 (KSC) 신진연구자세션",
+        note:   "도메인 특화 추천시스템을 위한 순위학습 (Learning-to-Rank) 기법의 적용과 발전"
+        dir:    "assets/images/gallery",
+        photos: ["251216_1.jpg", "251216_2.jpg", "251216_3.jpg"]
+      }
       {
-        date:   "2026.02.11",
-        title:  "외부 세미나 발표 (Invited Talk)",
-        note:   "한국정보과학회 동계학술대회",
-        dir:    "assets/images/gallery/2026-02-11-seminar",
-        photos: ["1.jpg", "2.jpg", "3.jpg"]
+        date:   "2025.12.13",
+        title:  "Korea-Japan Database Workshop (KJDB 2025)",
+        note:   "Recommender Models are Ranking Learners: Domain-Specific Pairwise Learning-to-Rank Techniques for Recommender Systems"
+        dir:    "assets/images/gallery",
+        photos: ["251213_1.jpg", "251213_2.jpg", "251213_3.jpg", "251213_4.jpg"]
       }
     ];
   </script>
