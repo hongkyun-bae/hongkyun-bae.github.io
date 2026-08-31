@@ -8,14 +8,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cosmo/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
-    /* 행사 제목 줄 */
+    /* 행사 제목 블록 */
     .event-head {
-      display: flex;
-      align-items: baseline;
-      gap: .75rem;
       border-bottom: 2px solid var(--bs-primary);
       padding-bottom: .5rem;
       margin-bottom: 1.25rem;
+    }
+    .event-headline {
+      display: flex;
+      align-items: baseline;
+      gap: .75rem;
+      flex-wrap: wrap;
     }
     .event-date {
       font-variant-numeric: tabular-nums;
@@ -24,7 +27,14 @@
       white-space: nowrap;
     }
     .event-title { font-weight: 600; margin: 0; }
-    .event-note { font-size: .9rem; color: #6c757d; margin-left: auto; }
+    /* 논문 제목처럼 긴 메모는 제목 아랫줄에 */
+    .event-note {
+      display: block;
+      font-size: .9rem;
+      color: #6c757d;
+      margin-top: .35rem;
+      line-height: 1.45;
+    }
 
     /* 썸네일: 사진 비율이 달라도 그리드가 흐트러지지 않게 */
     .photo-thumb {
@@ -37,6 +47,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,.10);
       transition: transform .2s ease;
       display: block;
+      background: #f1f3f5;
     }
     .photo-thumb:hover { transform: scale(1.03); }
 
@@ -114,10 +125,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- ===================================================================
-         1) assets/images/gallery/ 아래에 행사 폴더 생성 후 사진 업로드
-            예) assets/images/gallery/2026-08-19-graduation/1.jpg, 2.jpg, ...
-         2) 아래에 { date, title, dir, photos } 객체 추가
+         1) assets/images/gallery/ 에 사진 업로드
+         2) 아래에 { date, title, note, dir, photos } 객체 추가
        배열 위쪽이 화면 위쪽 (최신순)
+       ★ 각 속성 끝, 각 객체 끝의 쉼표(,)를 빠뜨리지 말 것
        =================================================================== -->
   <script>
     const EVENTS = [
@@ -131,14 +142,14 @@
       {
         date:   "2025.12.16",
         title:  "한국소프트웨어종합학술대회 (KSC) 신진연구자세션",
-        note:   "도메인 특화 추천시스템을 위한 순위학습 (Learning-to-Rank) 기법의 적용과 발전"
+        note:   "도메인 특화 추천시스템을 위한 순위학습 (Learning-to-Rank) 기법의 적용과 발전",
         dir:    "assets/images/gallery",
         photos: ["251216_1.jpg", "251216_2.jpg", "251216_3.jpg"]
-      }
+      },
       {
         date:   "2025.12.13",
         title:  "Korea-Japan Database Workshop (KJDB 2025)",
-        note:   "Recommender Models are Ranking Learners: Domain-Specific Pairwise Learning-to-Rank Techniques for Recommender Systems"
+        note:   "Recommender Models are Ranking Learners: Domain-Specific Pairwise Learning-to-Rank Techniques for Recommender Systems",
         dir:    "assets/images/gallery",
         photos: ["251213_1.jpg", "251213_2.jpg", "251213_3.jpg", "251213_4.jpg"]
       }
@@ -156,19 +167,24 @@
         const section = document.createElement("div");
         section.className = i === EVENTS.length - 1 ? "" : "mb-5";
 
-        // 제목 줄
+        // 제목 블록
         const head = document.createElement("div");
         head.className = "event-head";
+
+        const headline = document.createElement("div");
+        headline.className = "event-headline";
         const date = document.createElement("span");
         date.className = "event-date";
         date.textContent = ev.date;
         const title = document.createElement("h2");
         title.className = "event-title h5";
         title.textContent = ev.title;
-        head.append(date, title);
+        headline.append(date, title);
+        head.appendChild(headline);
+
         if (ev.note) {
           const note = document.createElement("span");
-          note.className = "event-note d-none d-md-inline";
+          note.className = "event-note";
           note.textContent = ev.note;
           head.appendChild(note);
         }
@@ -185,6 +201,10 @@
           img.src = ev.dir + "/" + file;
           img.alt = ev.title + " " + (n + 1);
           img.loading = "lazy";
+          img.addEventListener("error", function () {
+            // 파일명이 틀린 경우 콘솔에서 바로 확인할 수 있게
+            console.warn("이미지를 찾을 수 없습니다:", img.src);
+          });
           img.addEventListener("click", function () {
             modalImg.src = img.src;
             modalImg.alt = img.alt;
