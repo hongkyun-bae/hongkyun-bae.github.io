@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | PRecS Lab</title>
+  <!-- Bootswatch Cosmo Theme -->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cosmo/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* 행사 제목 줄 */
+    .event-head {
+      display: flex;
+      align-items: baseline;
+      gap: .75rem;
+      border-bottom: 2px solid var(--bs-primary);
+      padding-bottom: .5rem;
+      margin-bottom: 1.25rem;
+    }
+    .event-date {
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+      color: var(--bs-primary);
+      white-space: nowrap;
+    }
+    .event-title { font-weight: 600; margin: 0; }
+    .event-note { font-size: .9rem; color: #6c757d; margin-left: auto; }
+
+    /* 썸네일: 사진 비율이 달라도 그리드가 흐트러지지 않게 */
+    .photo-thumb {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: 50% 45%;
+      border-radius: .375rem;
+      cursor: zoom-in;
+      box-shadow: 0 2px 8px rgba(0,0,0,.10);
+      transition: transform .2s ease;
+      display: block;
+    }
+    .photo-thumb:hover { transform: scale(1.03); }
+
+    /* 확대 보기(모달) */
+    #lightboxModal .modal-body { padding: 0; background: #000; }
+    #lightboxModal img { width: 100%; height: auto; display: block; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .photo-thumb { transition: none; }
+      .photo-thumb:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- px-3로 좌우 패딩 통일 -->
+    <div class="container px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/images/kookmin_logo.png" alt="Kookmin University Logo" class="brand-logo">
+        <span class="fw-semibold">PRecS Lab</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Professor</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-light text-center py-5 border-bottom">
+    <div class="container">
+      <h1 class="fw-bold">Gallery</h1>
+      <p class="lead mb-0">Moments from the PRecS Lab</p>
+    </div>
+  </header>
+
+  <!-- Main : 행사 목록이 여기에 자동으로 그려집니다 -->
+  <main class="container my-5" id="galleryRoot"></main>
+
+  <!-- 확대 보기 모달 -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="lightboxLabel">Photo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="lightboxImage" src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-3">
+    <div class="container">
+      <small>© 2025 PRecS Lab | Kookmin University</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===================================================================
+       행사가 생길 때마다 아래 EVENTS 배열 맨 위에 한 덩어리만 추가하면 됩니다.
+         1) assets/images/gallery/ 아래에 행사 폴더를 만들고 사진 업로드
+            예) assets/images/gallery/2026-08-19-graduation/1.jpg, 2.jpg, ...
+         2) 아래에 { date, title, dir, photos } 객체 추가
+       배열 위쪽이 화면 위쪽(최신순)입니다. HTML은 손댈 필요 없습니다.
+       =================================================================== -->
+  <script>
+    const EVENTS = [
+      {
+        date:   "2026.08.19",
+        title:  "졸업식 (Commencement)",
+        dir:    "assets/images/gallery/2026-08-19-graduation",
+        photos: ["1.jpg", "2.jpg", "3.jpg"]
+      },
+      {
+        date:   "2026.04.05",
+        title:  "연구실 회식 (Lab Dinner)",
+        dir:    "assets/images/gallery/2026-04-05-dinner",
+        photos: ["1.jpg", "2.jpg"]
+      },
+      {
+        date:   "2026.02.11",
+        title:  "외부 세미나 발표 (Invited Talk)",
+        note:   "한국정보과학회 동계학술대회",
+        dir:    "assets/images/gallery/2026-02-11-seminar",
+        photos: ["1.jpg", "2.jpg", "3.jpg"]
+      }
+    ];
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const root = document.getElementById("galleryRoot");
+      const modal = new bootstrap.Modal(document.getElementById("lightboxModal"));
+      const modalImg = document.getElementById("lightboxImage");
+      const modalLabel = document.getElementById("lightboxLabel");
+
+      EVENTS.forEach(function (ev, i) {
+        const section = document.createElement("div");
+        section.className = i === EVENTS.length - 1 ? "" : "mb-5";
+
+        // 제목 줄
+        const head = document.createElement("div");
+        head.className = "event-head";
+        const date = document.createElement("span");
+        date.className = "event-date";
+        date.textContent = ev.date;
+        const title = document.createElement("h2");
+        title.className = "event-title h5";
+        title.textContent = ev.title;
+        head.append(date, title);
+        if (ev.note) {
+          const note = document.createElement("span");
+          note.className = "event-note d-none d-md-inline";
+          note.textContent = ev.note;
+          head.appendChild(note);
+        }
+        section.appendChild(head);
+
+        // 사진 그리드
+        const row = document.createElement("div");
+        row.className = "row g-3";
+        ev.photos.forEach(function (file, n) {
+          const col = document.createElement("div");
+          col.className = "col-6 col-md-4 col-lg-3";
+          const img = document.createElement("img");
+          img.className = "photo-thumb";
+          img.src = ev.dir + "/" + file;
+          img.alt = ev.title + " " + (n + 1);
+          img.loading = "lazy";
+          img.addEventListener("click", function () {
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalLabel.textContent = ev.date + "  " + ev.title;
+            modal.show();
+          });
+          col.appendChild(img);
+          row.appendChild(col);
+        });
+        section.appendChild(row);
+
+        root.appendChild(section);
+      });
+    });
+  </script>
+</body>
+</html>
