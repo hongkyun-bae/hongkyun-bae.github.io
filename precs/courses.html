@@ -10,8 +10,6 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/main.css"/>
   <style>
-    /* 학기 라벨 1열 + 과목 N열의 표 구조.
-       한 개의 grid 안에 모든 학기가 들어가므로 과목명 열이 서로 정렬됩니다. */
     .course-grid {
       display: grid;
       justify-content: start;
@@ -86,7 +84,7 @@
   </div>
 </header>
 
-<!-- Main : 학기별 목록이 여기에 자동으로 그려집니다 -->
+<!-- Main : 학기별 목록 -->
 <main class="container my-5">
   <div class="course-grid" id="courseRoot"></div>
 </main>
@@ -104,14 +102,13 @@
        { term: "Fall 2026", courses: ["과목명", ...] }
      강의계획서를 링크하려면 문자열 대신 객체로:
        { name: "자료구조", url: "assets/files/ds-2026f.pdf" }
-     과목 열 개수는 가장 많은 학기에 맞춰 자동으로 늘어납니다.
-     ★ 각 속성 끝, 각 객체 끝의 쉼표(,)를 빠뜨리지 말 것
+     과목 열 개수는 가장 많은 학기에 맞춰 자동으로 증가.
      =================================================================== -->
 <script>
   const TERMS = [
     {
       term: "Fall 2026",
-      courses: ["자료구조", "데이터베이스응용과 XML"]
+      courses: ["데이터베이스응용과 XML", "자료구조", "추천시스템특론(대학원)"]
     },
     {
       term: "Spring 2026",
@@ -119,7 +116,7 @@
     },
     {
       term: "Fall 2025",
-      courses: ["데이터과학", "자료구조"]
+      courses: ["데이터과학", "자료구조", "추천시스템특론(대학원)"]
     },
     {
       term: "Spring 2025",
