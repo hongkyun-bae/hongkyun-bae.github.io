@@ -123,7 +123,7 @@
     </div>
   </header>
 
-  <!-- Main : 특허 목록이 여기에 자동으로 그려집니다 -->
+  <!-- Main : 특허 목록 -->
   <main class="container my-5" id="patentRoot"></main>
 
   <!-- Footer -->
@@ -136,8 +136,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- ===================================================================
-       특허가 추가될 때마다 아래 PATENTS 배열에 한 덩어리만 넣으면 됩니다.
-       HTML은 손댈 필요 없습니다.
 
        status   : "registered"(등록) 또는 "pending"(출원 중)  ← 섹션이 나뉘는 기준
        country  : "KR" / "US" / "PCT" 등
@@ -149,21 +147,83 @@
        assignee : 권리자(출원인)
        link     : KIPRIS·Google Patents 등 상세 링크 (없으면 생략)
 
-       정렬은 자동입니다. 등록 특허는 등록일, 출원 특허는 출원일 최신순.
+       정렬 기준: 등록 특허는 등록일, 출원 특허는 출원일 최신순
        =================================================================== -->
   <script>
     const PATENTS = [
       {
         status:   "registered",
+        country:  "US",
+        titleEn:  "Method for Optimizing Performance of Algorithm Using Precision Scaling",
+        inventors:["Yongjun Park", "Seokwon Kang", "Sang-Wook Kim", "Hong-Kyun Bae*", "Jae-Seo Yu", "Kyunghwan Choi"],
+        regNo:    "11,537,395",
+        regDate:  "2022.12.27",
+        assignee: "Industry-University Cooperation Foundation Hanyang University",
+        link:     ""
+      },
+      {
+        status:   "registered",
         country:  "KR",
-        titleKo:  "사용자 행동 이력 기반 추천 결과의 다양성을 향상시키는 방법 및 장치",
-        titleEn:  "Method and apparatus for improving diversity of recommendation results based on user interaction history",
-        inventors:["배홍균*", "정민지", "송현우"],
-        appNo:    "10-2024-0000000",
-        appDate:  "2024.03.11",
-        regNo:    "10-0000000",
-        regDate:  "2025.09.02",
-        assignee: "국민대학교 산학협력단",
+        titleKo:  "아이템 랭킹 승격 기반의 추천 방법 및 그 시스템",
+        titleEn:  "Item-Ranking Promotion in Recommender Systems",
+        inventors:["배홍균*", "장해리", "김상욱"],
+        appNo:    "10-2023-0116956",
+        appDate:  "2023.09.04",
+        regNo:    "10-2995802",
+        regDate:  "2026.07.22",
+        assignee: "한양대학교 산학협력단",
+        link:     ""
+      },
+      {
+        status:   "registered",
+        country:  "KR",
+        titleKo:  "추천시스템에서의 효율적인 행렬 분해를 위한 양자화 프레임워크 장치 및 학습방법",
+        titleEn:  "A Quantization Framework for Efficient Matrix Factorization in Recommender Systems",
+        inventors:["유재서", "고윤용", "배홍균*", "박영준", "김상욱"],
+        appNo:    "10-2021-0184046",
+        appDate:  "2021.12.21",
+        regNo:    "10-2921898",
+        regDate:  "2026.01.29",
+        assignee: "한양대학교 산학협력단",
+        link:     ""
+      },
+      {
+        status:   "registered",
+        country:  "KR",
+        titleKo:  "감정 요소가 결합된 지식 그래프와 강화학습을 이용한 설명 가능한 추천 시스템 및 방법",
+        titleEn:  "Explainable Recommendation System and Method Incorporating Sentiment on Relations into Knowledge Graph and Reinforcement Learning",
+        inventors:["박성준", "채동규", "배홍균*", "김상욱"],
+        appNo:    "10-2021-0054841",
+        appDate:  "2021.04.28",
+        regNo:    "10-2633688",
+        regDate:  "2023.11.29",
+        assignee: "한양대학교 산학협력단",
+        link:     ""
+      },
+      {
+        status:   "registered",
+        country:  "KR",
+        titleKo:  "경쟁 프로그램 기반의 TV 프로그램 추천 방법 및 장치",
+        titleEn:  "Method and Apparatus for Recommending TV Programs based on Competing Programs",
+        inventors:["배홍균*", "이연창", "김상욱"],
+        appNo:    "10-2020-0182547",
+        appDate:  "2020.12.23",
+        regNo:    "10-2372712",
+        regDate:  "2021.12.16",
+        assignee: "한양대학교 산학협력단",
+        link:     ""
+      },
+      {
+        status:   "registered",
+        country:  "KR",
+        titleKo:  "표준화된 평점 기반의 아이템 추천 방법 및 장치",
+        titleEn:  "Method and Apparatus for Recommending Items based on Standardized Ratings",
+        inventors:["배홍균*", "김형욱", "김상욱"],
+        appNo:    "10-2018-0056888",
+        appDate:  "2018.05.18",
+        regNo:    "10-2200340",
+        regDate:  "2021.01.04",
+        assignee: "한양대학교 산학협력단",
         link:     ""
       },
       {
