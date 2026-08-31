@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patents | PRecS Lab</title>
+  <!-- Bootswatch Cosmo Theme -->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cosmo/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* 섹션 제목 */
+    .patent-group-title {
+      font-weight: 700;
+      border-bottom: 2px solid var(--bs-primary);
+      padding-bottom: .5rem;
+      margin-bottom: 1.75rem;
+    }
+    .patent-group-title .count {
+      font-size: .9rem;
+      font-weight: 500;
+      color: #6c757d;
+      margin-left: .5rem;
+    }
+
+    /* 특허 한 건 */
+    .patent-item {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+    .patent-item:last-child { border-bottom: 0; }
+
+    .patent-year {
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--bs-primary);
+      padding-top: .1rem;
+    }
+    .patent-country {
+      display: block;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: #6c757d;
+      margin-top: .15rem;
+    }
+
+    .patent-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.45;
+      margin-bottom: .2rem;
+    }
+    .patent-title-en {
+      color: #6c757d;
+      font-size: .95rem;
+      margin-bottom: .45rem;
+    }
+    .patent-inventors {
+      font-size: .95rem;
+      margin-bottom: .45rem;
+    }
+    .patent-inventors .me { font-weight: 700; }
+
+    /* 번호·날짜 등 메타 정보 */
+    .patent-meta {
+      font-size: .875rem;
+      color: #6c757d;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem 1.25rem;
+      margin-bottom: 0;
+    }
+    .patent-meta .label {
+      color: #495057;
+      font-weight: 600;
+      margin-right: .3rem;
+    }
+    .patent-links { margin-top: .6rem; }
+    .patent-links .btn { margin-right: .4rem; }
+
+    @media (max-width: 575.98px) {
+      .patent-item { grid-template-columns: 1fr; gap: .35rem; }
+      .patent-country { display: inline; margin-left: .5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/images/kookmin_logo.png" alt="Kookmin University Logo" class="brand-logo">
+        <span class="fw-semibold">PRecS Lab</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Professor</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link active" href="patents.html">Patents</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-light text-center py-5 border-bottom">
+    <div class="container">
+      <h1 class="fw-bold">Patents</h1>
+      <p class="lead mb-0">Registered patents and pending applications</p>
+    </div>
+  </header>
+
+  <!-- Main : 특허 목록이 여기에 자동으로 그려집니다 -->
+  <main class="container my-5" id="patentRoot"></main>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-3">
+    <div class="container">
+      <small>© 2025 PRecS Lab | Kookmin University</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===================================================================
+       특허가 추가될 때마다 아래 PATENTS 배열에 한 덩어리만 넣으면 됩니다.
+       HTML은 손댈 필요 없습니다.
+
+       status   : "registered"(등록) 또는 "pending"(출원 중)  ← 섹션이 나뉘는 기준
+       country  : "KR" / "US" / "PCT" 등
+       titleKo  : 국문 발명의 명칭 (없으면 생략 가능)
+       titleEn  : 영문 명칭 (없으면 생략 가능)
+       inventors: 발명자 배열. 이름 뒤에 *를 붙이면 굵게 표시됩니다.
+       appNo/appDate : 출원번호 / 출원일
+       regNo/regDate : 등록번호 / 등록일 (등록 특허만)
+       assignee : 권리자(출원인)
+       link     : KIPRIS·Google Patents 등 상세 링크 (없으면 생략)
+
+       정렬은 자동입니다. 등록 특허는 등록일, 출원 특허는 출원일 최신순.
+       =================================================================== -->
+  <script>
+    const PATENTS = [
+      {
+        status:   "registered",
+        country:  "KR",
+        titleKo:  "사용자 행동 이력 기반 추천 결과의 다양성을 향상시키는 방법 및 장치",
+        titleEn:  "Method and apparatus for improving diversity of recommendation results based on user interaction history",
+        inventors:["배홍균*", "정민지", "송현우"],
+        appNo:    "10-2024-0000000",
+        appDate:  "2024.03.11",
+        regNo:    "10-0000000",
+        regDate:  "2025.09.02",
+        assignee: "국민대학교 산학협력단",
+        link:     ""
+      },
+      {
+        status:   "pending",
+        country:  "KR",
+        titleKo:  "그래프 신경망을 이용한 협업 필터링 장치 및 그 동작 방법",
+        titleEn:  "Collaborative filtering apparatus using graph neural networks and operating method thereof",
+        inventors:["배홍균*", "신정현"],
+        appNo:    "10-2025-0000000",
+        appDate:  "2025.06.24",
+        assignee: "국민대학교 산학협력단",
+        link:     ""
+      }
+    ];
+
+    const GROUPS = [
+      { key: "registered", title: "Registered Patents", subtitle: "등록 특허", sortBy: "regDate" },
+      { key: "pending",    title: "Patent Applications", subtitle: "출원 특허", sortBy: "appDate" }
+    ];
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const root = document.getElementById("patentRoot");
+
+      function esc(s) {
+        return String(s).replace(/[&<>"]/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+        });
+      }
+
+      function year(d) {
+        return d ? String(d).slice(0, 4) : "";
+      }
+
+      function metaItem(label, value) {
+        if (!value) return "";
+        return '<span><span class="label">' + label + '</span>' + esc(value) + '</span>';
+      }
+
+      function renderItem(p, sortKey) {
+        const el = document.createElement("article");
+        el.className = "patent-item";
+
+        // 왼쪽: 연도 + 국가
+        const left = document.createElement("div");
+        left.className = "patent-year";
+        left.innerHTML = esc(year(p[sortKey])) +
+          '<span class="patent-country">' + esc(p.country || "") + '</span>';
+
+        // 오른쪽: 본문
+        const body = document.createElement("div");
+        let html = "";
+
+        if (p.titleKo) html += '<p class="patent-title mb-1">' + esc(p.titleKo) + '</p>';
+        if (p.titleEn) {
+          html += '<p class="' + (p.titleKo ? 'patent-title-en' : 'patent-title') + '">' +
+                  esc(p.titleEn) + '</p>';
+        }
+
+        if (p.inventors && p.inventors.length) {
+          const names = p.inventors.map(function (n) {
+            return n.endsWith("*")
+              ? '<span class="me">' + esc(n.slice(0, -1)) + '</span>'
+              : esc(n);
+          }).join(", ");
+          html += '<p class="patent-inventors">' + names + '</p>';
+        }
+
+        html += '<p class="patent-meta">' +
+          metaItem("출원", [p.appNo, p.appDate].filter(Boolean).join(" · ")) +
+          metaItem("등록", [p.regNo, p.regDate].filter(Boolean).join(" · ")) +
+          metaItem("권리자", p.assignee) +
+          '</p>';
+
+        if (p.link) {
+          html += '<div class="patent-links">' +
+            '<a class="btn btn-sm btn-outline-primary" href="' + esc(p.link) +
+            '" target="_blank" rel="noopener">상세 정보</a></div>';
+        }
+
+        body.innerHTML = html;
+        el.append(left, body);
+        return el;
+      }
+
+      GROUPS.forEach(function (g) {
+        const items = PATENTS
+          .filter(function (p) { return p.status === g.key; })
+          .sort(function (a, b) {
+            return String(b[g.sortBy] || "").localeCompare(String(a[g.sortBy] || ""));
+          });
+
+        if (!items.length) return;
+
+        const section = document.createElement("section");
+        section.className = "mb-5";
+
+        const h2 = document.createElement("h2");
+        h2.className = "patent-group-title h4";
+        h2.innerHTML = esc(g.title) +
+          '<span class="count">' + esc(g.subtitle) + ' · ' + items.length + '건</span>';
+        section.appendChild(h2);
+
+        items.forEach(function (p) {
+          section.appendChild(renderItem(p, g.sortBy));
+        });
+
+        root.appendChild(section);
+      });
+
+      if (!root.children.length) {
+        root.innerHTML = '<p class="text-muted text-center py-5 mb-0">등록된 특허 정보가 아직 없습니다.</p>';
+      }
+    });
+  </script>
+</body>
+</html>
