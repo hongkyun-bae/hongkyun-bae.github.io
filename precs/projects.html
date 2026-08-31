@@ -6,6 +6,53 @@
   <title>Projects | PRecS Lab</title>
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cosmo/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+    /* 프로젝트 카드 */
+    .project-card {
+      border-left: 4px solid #dee2e6;   /* 기본(참여) 과제 */
+      transition: box-shadow .2s ease;
+    }
+    .project-card + .project-card { margin-top: 1.25rem; }
+    .project-card:hover { box-shadow: 0 .5rem 1rem rgba(0,0,0,.10) !important; }
+
+    /* 연구책임자 과제 강조 */
+    .project-card.is-pi {
+      border-left: 6px solid var(--bs-primary);
+      background: rgba(39, 128, 227, .04);
+    }
+    .project-card.is-pi .project-title { font-weight: 700; }
+
+    .project-title { font-weight: 600; line-height: 1.4; }
+    .project-funder { color: #6c757d; }
+
+    .badge-row { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+    .badge-row:not(:last-child) { margin-bottom: .5rem; }
+    .project-period { font-variant-numeric: tabular-nums; }
+
+    /* 역할 배지 */
+    .badge-pi {
+      background: var(--bs-primary);
+      letter-spacing: .01em;
+      box-shadow: 0 1px 3px rgba(39,128,227,.35);
+    }
+    .badge-role { background: #adb5bd; }
+
+    .project-desc { font-size: .95rem; color: #495057; margin: .5rem 0 0; }
+
+    /* 범례 */
+    .legend { font-size: .875rem; color: #6c757d; display: flex; align-items: center; gap: .5rem; }
+    .legend .swatch {
+      display: inline-block;
+      width: .75rem;
+      height: .75rem;
+      border-radius: 2px;
+      background: var(--bs-primary);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .project-card { transition: none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -28,12 +75,11 @@
         <li class="nav-item"><a class="nav-link" href="patents.html">Patents</a></li>
         <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>  
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
 
 <header class="bg-light text-center py-5 border-bottom">
   <div class="container">
@@ -42,39 +88,10 @@
   </div>
 </header>
 
+<!-- Main : 프로젝트 목록이 여기에 자동으로 그려집니다 -->
 <main class="container my-5">
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <h4 class="card-title mb-2">멀티모달 통합 임베딩 및 자가 검증형 실시간 Agentic AI 기반 고신뢰 기업 공시 데이터 분석 기술 개발</h4>
-      <h6 class="card-subtitle text-muted mb-3">생성AI 선도인재양성사업</h6>
-      <p class="mb-2"><span class="badge bg-primary">2026.04 – 2029.12</span></p>
-      <p class="mb-0"><span class="badge bg-success">Generative AI</span>&nbsp&nbsp<span class="badge bg-success">Multimodal Embedding</span></p>
-    </div>
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <h4 class="card-title mb-2">재난 피해 요인 해체 및 재조합 기반의 생성형 재난 데이터 구성과 선제적 피해 예측 기술</h4>
-      <h6 class="card-subtitle text-muted mb-3">IITP 정보통신기획평가원 디지털콜럼버스프로젝트</h6>
-      <p class="mb-2"><span class="badge bg-primary">2026.04 – 2027.12</span>&nbsp&nbsp<span class="badge bg-primary">연구책임자</span></p>
-      <p class="mb-0"><span class="badge bg-success">Learning-to-Rank</span>&nbsp&nbsp<span class="badge bg-success">Causal Inference</span>&nbsp&nbsp<span class="badge bg-success">Generative AI</span></p>
-    </div>
-  </div>
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <h4 class="card-title mb-2">도메인 적응형 추천 전략 선택 자동화를 위한 지능형 에이전트 연구</h4>
-      <h6 class="card-subtitle text-muted mb-3">한국연구재단 신진연구(유형A)</h6>
-      <p class="mb-2"><span class="badge bg-primary">2026.03 – 2028.02</span>&nbsp&nbsp<span class="badge bg-primary">연구책임자</span></p>
-      <p class="mb-0"><span class="badge bg-success">Recommender Systems</span>&nbsp&nbsp<span class="badge bg-success">Agentic AI</span></p>
-    </div>
-  </div>
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <h4 class="card-title mb-2">멀티모달 기반 로봇 특화 Embodied AI 선도 문제 해결과 인재양성</h4>
-      <h6 class="card-subtitle text-muted mb-3">AI스타펠로우십지원사업</h6>
-      <p class="mb-2"><span class="badge bg-primary">2025.04 – 2030.12</span></p>
-      <p class="mb-0"><span class="badge bg-success">Multimodal</span>&nbsp&nbsp<span class="badge bg-success">Robotics</span></p>
-<!--       <p class="mb-0">Multimodal, robotics-focused Embodied AI: tackling foundational challenges and training next-generation experts.</p> -->
-    </div>
-  </div>
+  <p class="legend mb-4"><span class="swatch"></span> 파란 테두리 표시는 연구책임자 (PI) 과제입니다.</p>
+  <div id="projectRoot"></div>
 </main>
 
 <footer class="bg-light text-center text-muted py-3">
@@ -84,6 +101,107 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ===================================================================
+     과제를 추가할 때는 PROJECTS 배열 맨 위에 객체 하나만 추가.
+       { title, funder, period, pi: true, role: "...", tags: [...], desc: "..." }
+     - pi: true      → 카드 강조 + '연구책임자 (PI)' 배지
+     - role: "공동연구원" 등 → 회색 역할 배지 (pi 가 아닐 때만 사용)
+     - role, desc 는 선택 항목
+     ★ 각 속성 끝, 각 객체 끝의 쉼표(,)를 빠뜨리지 말 것
+     =================================================================== -->
+<script>
+  const PROJECTS = [
+    {
+      title:  "멀티모달 통합 임베딩 및 자가 검증형 실시간 Agentic AI 기반 고신뢰 기업 공시 데이터 분석 기술 개발",
+      funder: "생성AI 선도인재양성사업",
+      period: "2026.04 – 2029.12",
+      tags:   ["Generative AI", "Multimodal Embedding"]
+    },
+    {
+      title:  "재난 피해 요인 해체 및 재조합 기반의 생성형 재난 데이터 구성과 선제적 피해 예측 기술",
+      funder: "IITP 정보통신기획평가원 디지털콜럼버스프로젝트",
+      period: "2026.04 – 2027.12",
+      pi:     true,
+      tags:   ["Learning-to-Rank", "Causal Inference", "Generative AI"]
+    },
+    {
+      title:  "도메인 적응형 추천 전략 선택 자동화를 위한 지능형 에이전트 연구",
+      funder: "한국연구재단 신진연구(유형A)",
+      period: "2026.03 – 2028.02",
+      pi:     true,
+      tags:   ["Recommender Systems", "Agentic AI"]
+    },
+    {
+      title:  "멀티모달 기반 로봇 특화 Embodied AI 선도 문제 해결과 인재양성",
+      funder: "AI스타펠로우십지원사업",
+      period: "2025.04 – 2030.12",
+      tags:   ["Multimodal", "Robotics"]
+      // desc: "Multimodal, robotics-focused Embodied AI: tackling foundational challenges and training next-generation experts."
+    }
+  ];
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const root = document.getElementById("projectRoot");
+
+    function badge(text, cls) {
+      const b = document.createElement("span");
+      b.className = "badge " + cls;
+      b.textContent = text;
+      return b;
+    }
+
+    PROJECTS.forEach(function (p) {
+      const card = document.createElement("div");
+      card.className = "card project-card shadow-sm" + (p.pi ? " is-pi" : "");
+
+      const body = document.createElement("div");
+      body.className = "card-body";
+
+      const title = document.createElement("h2");
+      title.className = "card-title project-title h5 mb-2";
+      title.textContent = p.title;
+      body.appendChild(title);
+
+      const funder = document.createElement("h3");
+      funder.className = "card-subtitle project-funder h6 mb-3";
+      funder.textContent = p.funder;
+      body.appendChild(funder);
+
+      // 역할 / 기간
+      const meta = document.createElement("div");
+      meta.className = "badge-row";
+      if (p.pi) {
+        meta.appendChild(badge("연구책임자 (PI)", "badge-pi"));
+      } else if (p.role) {
+        meta.appendChild(badge(p.role, "badge-role"));
+      }
+      const period = badge(p.period, "bg-light text-dark border");
+      period.classList.add("project-period");
+      meta.appendChild(period);
+      body.appendChild(meta);
+
+      // 키워드
+      if (p.tags && p.tags.length) {
+        const tags = document.createElement("div");
+        tags.className = "badge-row";
+        p.tags.forEach(function (t) { tags.appendChild(badge(t, "bg-success")); });
+        body.appendChild(tags);
+      }
+
+      if (p.desc) {
+        const desc = document.createElement("p");
+        desc.className = "project-desc";
+        desc.textContent = p.desc;
+        body.appendChild(desc);
+      }
+
+      card.appendChild(body);
+      root.appendChild(card);
+    });
+  });
+</script>
 </body>
 </html>
-

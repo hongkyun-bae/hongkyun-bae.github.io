@@ -8,6 +8,48 @@
   <!-- Bootswatch Cosmo Theme -->
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cosmo/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* 섹션 제목 (members.html / gallery.html과 동일한 스타일) */
+    .section-title {
+      font-weight: 700;
+      border-bottom: 2px solid var(--bs-primary);
+      padding-bottom: .5rem;
+      margin-bottom: 1.25rem;
+    }
+    .section-title .count {
+      font-size: .9rem;
+      font-weight: 500;
+      color: #6c757d;
+      margin-left: .5rem;
+    }
+
+    /* 논문 항목 */
+    .pub-item {
+      display: flex;
+      gap: 1rem;
+      padding: .85rem .25rem;
+      line-height: 1.6;
+    }
+    .pub-item + .pub-item { border-top: 1px solid rgba(0,0,0,.075); }
+    .pub-year {
+      flex: 0 0 3.25rem;
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+      color: var(--bs-primary);
+    }
+    .pub-body { flex: 1 1 auto; }
+    .pub-title { display: block; margin: .1rem 0; }
+    .pub-title a { text-decoration: none; }
+    .pub-title a:hover { text-decoration: underline; }
+    .pub-venue { font-style: italic; font-weight: 600; }
+    .pub-badges { margin-left: .35rem; white-space: nowrap; }
+    .pub-badges .badge + .badge { margin-left: .35rem; }
+
+    @media (max-width: 575.98px) {
+      .pub-item { flex-direction: column; gap: .25rem; }
+      .pub-year { flex: none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -31,146 +73,22 @@
         <li class="nav-item"><a class="nav-link" href="patents.html">Patents</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>  
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-
 <!-- Header -->
 <header class="bg-light text-center py-5 border-bottom">
   <div class="container">
     <h1 class="fw-bold">Publications</h1>
-    <p class="lead">Publications by PRecS Lab</p>
+    <p class="lead mb-0">Publications by PRecS Lab</p>
   </div>
 </header>
 
-<!-- Main Content -->
-<main class="container my-5">
-
-  <!-- International Conferences -->
-  <section class="mb-5">
-    <h2 class="mb-4">International Conferences</h2>
-    <ul class="list-group list-group-flush">
-
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Zhenping Jin, and Sang-Wook Kim. 
-        "SAND: Subjective-Anticipation-Augmented News Recommendation via Dual-Pathway Distillation." 
-        <em><strong>EMNLP (Main Conference)</strong></em>, 2026. <span class="badge bg-success">Top Conf.</span>
-      </li>
-      
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Hae-Ri Jang, Won-Yong Shin, and Sang-Wook Kim. 
-        "Ranking Items by the Current-Preferences and Profits: A List-wise Learning-to-Rank Approach to Profit Maximization." 
-        <em><strong>ACM WWW</strong></em>, 2025. <span class="badge bg-success">Top Conf.</span>
-      </li>
-
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Yebeen Kim, Hyunjoon Kim, and Sang-Wook Kim. 
-        "Negative Sampling in Next-POI Recommendations: Observation, Approach, and Evaluation." 
-        <em><strong>ACM WWW</strong></em>, 2024. <span class="badge bg-success">Top Conf.</span>
-      </li>
-
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Hae-Ri Jang, Yang-Sae Moon, and Sang-Wook Kim. 
-        "Item-Ranking Promotion in Recommender Systems." 
-        <em><strong>ACM WWW (Short)</strong></em>, 2024. <span class="badge bg-success">Top Conf.</span>&nbsp&nbsp<span class="badge bg-secondary">Short</span>
-      </li>
-
-      <li class="list-group-item">
-        Jeewon Ahn, <strong>Hong-Kyun Bae</strong>, and Sang-Wook Kim. 
-        "Is the ‘Impression Log’ Beneficial to Evaluating News Recommender Systems? No, it is Not!." 
-        <em><strong>ACM WWW (Short)</strong></em>, 2024. <span class="badge bg-success">Top Conf.</span>&nbsp&nbsp<span class="badge bg-secondary">Short</span>
-      </li>
-
-      <li class="list-group-item">
-        Jeewon Ahn, <strong>Hong-Kyun Bae</strong>, and Sang-Wook Kim. 
-        "Is the Impression Log Beneficial to Effective Model Training in News Recommender Systems? No, It’s NOT." 
-        <em><strong>ACM WWW (Short)</strong></em>, 2023. <span class="badge bg-success">Top Conf.</span>&nbsp&nbsp<span class="badge bg-secondary">Short</span>
-      </li>
-
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Yeon-Chang Lee, Kyungsik Han, and Sang-Wook Kim. 
-        "A Competition-Aware Approach to Accurate TV Show Recommendation." 
-        <em><strong>IEEE ICDE</strong></em>, 2023. <span class="badge bg-success">Top Conf.</span>
-      </li>
-
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Jeewon Ahn, Dongwon Lee, and Sang-Wook Kim. 
-        "LANCER: A Lifetime-Aware News Recommender System." 
-        <em><strong>AAAI</strong></em>, 2023. <span class="badge bg-success">Top Conf.</span>
-      </li>
-
-      <li class="list-group-item">
-        Hongjun Lim, Yeon-Chang Lee, Jin-Seo Lee, Sanggyu Han, Seunghyeon Kim, Yeongjong Jeong, Changbong Kim, Jaehun Kim, Sunghoon Han, Solbi Choi, Hanjong Ko, Dokyeong Lee, Jaeho Choi, Yungi Kim, <strong>Hong-Kyun Bae</strong>, Taeho Kim, Jeewon Ahn, Hyun-Soung You, and Sang-Wook Kim. 
-        "AiRS: A Large-Scale Recommender System at NAVER News." 
-        <em><strong>IEEE ICDE</strong></em>, 2022. <span class="badge bg-success">Top Conf.</span>&nbsp&nbsp<span class="badge bg-secondary">Industry</span>
-      </li>
-      
-      <li class="list-group-item">
-        Sung-Jun Park, Dong-Kyu Chae, <strong>Hong-Kyun Bae</strong>, Sumin Park, and Sang-Wook Kim. 
-        "Reinforcement Learning over Sentiment-Augmented Knowledge Graphs towards Accurate and Explainable Recommendation." 
-        <em><strong>ACM WSDM</strong></em>, 2022. <span class="badge bg-success">Top Conf.</span>
-      </li>
-
-      <li class="list-group-item">
-        Yunyong Ko, Jae-Seo Yu, <strong>Hong-Kyun Bae</strong>, Yongjun Park, Dongwon Lee, and Sang-Wook Kim. 
-        "MASCOT: A Quantization Framework for Efficient Matrix Factorization in Recommender Systems." 
-        <em><strong>IEEE ICDM</strong></em>, 2021. <span class="badge bg-success">Top Conf.</span>
-      </li>
-
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Jeewon Ahn, and Sang-Wook Kim. 
-        "A Comparative Study for State-of-the-Art News Recommendation Methods." 
-        <em><strong>ICNGC</strong></em>, 2022.
-      </li>
-      
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Yeon-Chang Lee, and Sang-Wook Kim. 
-        "TV Show Recommendation: Methods and Evaluation." 
-        <em><strong>ICCC</strong></em>, 2020.
-      </li>
-
-    </ul>
-  </section>
-
-  <!-- SCIE Journals -->
-  <section>
-    <h2 class="mb-4">International SCIE Journals</h2>
-    <ul class="list-group list-group-flush">
-
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Jiyeon Kim, Jongwuk Lee, and Sang-Wook Kim. 
-        "DUET: Dually Guided Knowledge Distillation from Explicit Feedback." 
-        <em><strong>Information Fusion</strong></em>, 2025. 
-        <span class="badge bg-info">IF 14.8</span>
-      </li>
-
-      <li class="list-group-item">
-        <strong>Hong-Kyun Bae</strong>, Hyung-Ook Kim, Won-Yong Shin, and Sang-Wook Kim. 
-        "How to Get Consensus with Neighbors?: Rating Standardization for Accurate Collaborative Filtering." 
-        <em><strong>Knowledge-Based Systems</strong></em>, 2021. 
-        <span class="badge bg-info">IF 7.2</span><br><br><br>
-      </li>
-
-    </ul>
-  </section>
-  
-  <!-- Domestic Conferences -->
-  <section>
-    <h2 class="mb-4">Domestic Conferences</h2>
-    <ul class="list-group list-group-flush">
-
-      <li class="list-group-item">
-        정민지, 정민교, 배홍균. 
-        "RecPrompt++: 개인화된 셀프-튜닝 프롬프트 엔지니어링 기법을 이용한 효과적인 뉴스 추천 프레임워크." 
-        <em><strong>한국소프트웨어종합학술대회 (KSC)</strong></em>, 2025. 
-      </li>
-
-    </ul>
-  </section>
-</main>
+<!-- Main : 논문 목록이 여기에 자동으로 그려집니다 -->
+<main class="container my-5" id="pubRoot"></main>
 
 <!-- Footer -->
 <footer class="bg-light text-center text-muted py-3">
@@ -181,6 +99,257 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ===================================================================
+     논문을 추가할 때는 해당 섹션의 items 배열 맨 위에 객체 하나만 추가.
+       { authors, title, venue, year, tags: [...], if: "14.8", link: "..." }
+     - authors 안의 연구실 구성원 이름은 HIGHLIGHT 목록에 있으면 자동 굵게
+     - tags 는 아래 TAGS 에 정의된 키 (top / short / industry / award)
+     - if, link 는 선택 항목
+     ★ 각 속성 끝, 각 객체 끝의 쉼표(,)를 빠뜨리지 말 것
+     =================================================================== -->
+<script>
+  // 굵게 표시할 이름 (구성원 추가 시 여기에만 넣으면 전 항목에 적용)
+  const HIGHLIGHT = ["Hong-Kyun Bae", "배홍균"];
+
+  const TAGS = {
+    top:      { text: "Top Conf.", cls: "bg-success" },
+    short:    { text: "Short",     cls: "bg-secondary" },
+    industry: { text: "Industry",  cls: "bg-secondary" },
+    award:    { text: "Award",     cls: "bg-warning text-dark" }
+  };
+
+  const SECTIONS = [
+    {
+      title: "International Conferences",
+      items: [
+        {
+          authors: "Hong-Kyun Bae, Zhenping Jin, and Sang-Wook Kim",
+          title: "SAND: Subjective-Anticipation-Augmented News Recommendation via Dual-Pathway Distillation",
+          venue: "EMNLP (Main Conference)",
+          year: 2026,
+          tags: ["top"]
+        },
+        {
+          authors: "Hong-Kyun Bae, Hae-Ri Jang, Won-Yong Shin, and Sang-Wook Kim",
+          title: "Ranking Items by the Current-Preferences and Profits: A List-wise Learning-to-Rank Approach to Profit Maximization",
+          venue: "ACM WWW",
+          year: 2025,
+          tags: ["top"]
+        },
+        {
+          authors: "Hong-Kyun Bae, Yebeen Kim, Hyunjoon Kim, and Sang-Wook Kim",
+          title: "Negative Sampling in Next-POI Recommendations: Observation, Approach, and Evaluation",
+          venue: "ACM WWW",
+          year: 2024,
+          tags: ["top"]
+        },
+        {
+          authors: "Hong-Kyun Bae, Hae-Ri Jang, Yang-Sae Moon, and Sang-Wook Kim",
+          title: "Item-Ranking Promotion in Recommender Systems",
+          venue: "ACM WWW",
+          year: 2024,
+          tags: ["top", "short"]
+        },
+        {
+          authors: "Jeewon Ahn, Hong-Kyun Bae, and Sang-Wook Kim",
+          title: "Is the ‘Impression Log’ Beneficial to Evaluating News Recommender Systems? No, it is Not!",
+          venue: "ACM WWW",
+          year: 2024,
+          tags: ["top", "short"]
+        },
+        {
+          authors: "Jeewon Ahn, Hong-Kyun Bae, and Sang-Wook Kim",
+          title: "Is the Impression Log Beneficial to Effective Model Training in News Recommender Systems? No, It’s NOT",
+          venue: "ACM WWW",
+          year: 2023,
+          tags: ["top", "short"]
+        },
+        {
+          authors: "Hong-Kyun Bae, Yeon-Chang Lee, Kyungsik Han, and Sang-Wook Kim",
+          title: "A Competition-Aware Approach to Accurate TV Show Recommendation",
+          venue: "IEEE ICDE",
+          year: 2023,
+          tags: ["top"]
+        },
+        {
+          authors: "Hong-Kyun Bae, Jeewon Ahn, Dongwon Lee, and Sang-Wook Kim",
+          title: "LANCER: A Lifetime-Aware News Recommender System",
+          venue: "AAAI",
+          year: 2023,
+          tags: ["top"]
+        },
+        {
+          authors: "Hong-Kyun Bae, Jeewon Ahn, and Sang-Wook Kim",
+          title: "A Comparative Study for State-of-the-Art News Recommendation Methods",
+          venue: "ICNGC",
+          year: 2022
+        },
+        {
+          authors: "Hongjun Lim, Yeon-Chang Lee, Jin-Seo Lee, Sanggyu Han, Seunghyeon Kim, Yeongjong Jeong, Changbong Kim, Jaehun Kim, Sunghoon Han, Solbi Choi, Hanjong Ko, Dokyeong Lee, Jaeho Choi, Yungi Kim, Hong-Kyun Bae, Taeho Kim, Jeewon Ahn, Hyun-Soung You, and Sang-Wook Kim",
+          title: "AiRS: A Large-Scale Recommender System at NAVER News",
+          venue: "IEEE ICDE",
+          year: 2022,
+          tags: ["top", "industry"]
+        },
+        {
+          authors: "Sung-Jun Park, Dong-Kyu Chae, Hong-Kyun Bae, Sumin Park, and Sang-Wook Kim",
+          title: "Reinforcement Learning over Sentiment-Augmented Knowledge Graphs towards Accurate and Explainable Recommendation",
+          venue: "ACM WSDM",
+          year: 2022,
+          tags: ["top"]
+        },
+        {
+          authors: "Yunyong Ko, Jae-Seo Yu, Hong-Kyun Bae, Yongjun Park, Dongwon Lee, and Sang-Wook Kim",
+          title: "MASCOT: A Quantization Framework for Efficient Matrix Factorization in Recommender Systems",
+          venue: "IEEE ICDM",
+          year: 2021,
+          tags: ["top"]
+        },
+        {
+          authors: "Hong-Kyun Bae, Yeon-Chang Lee, and Sang-Wook Kim",
+          title: "TV Show Recommendation: Methods and Evaluation",
+          venue: "ICCC",
+          year: 2020
+        }
+      ]
+    },
+    {
+      title: "International SCIE Journals",
+      items: [
+        {
+          authors: "Hong-Kyun Bae, Jiyeon Kim, Jongwuk Lee, and Sang-Wook Kim",
+          title: "DUET: Dually Guided Knowledge Distillation from Explicit Feedback",
+          venue: "Information Fusion",
+          year: 2025,
+          if: "14.8"
+        },
+        {
+          authors: "Hong-Kyun Bae, Hyung-Ook Kim, Won-Yong Shin, and Sang-Wook Kim",
+          title: "How to Get Consensus with Neighbors?: Rating Standardization for Accurate Collaborative Filtering",
+          venue: "Knowledge-Based Systems",
+          year: 2021,
+          if: "7.2"
+        }
+      ]
+    },
+    {
+      title: "Domestic Conferences",
+      items: [
+        {
+          authors: "정민지, 정민교, 배홍균",
+          title: "RecPrompt++: 개인화된 셀프-튜닝 프롬프트 엔지니어링 기법을 이용한 효과적인 뉴스 추천 프레임워크",
+          venue: "한국소프트웨어종합학술대회 (KSC)",
+          year: 2025,
+          tags: ["award"]
+        }
+      ]
+    }
+  ];
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const root = document.getElementById("pubRoot");
+
+    // 저자 문자열에서 구성원 이름만 굵게
+    function renderAuthors(str) {
+      const frag = document.createDocumentFragment();
+      const re = new RegExp("(" + HIGHLIGHT.join("|") + ")", "g");
+      let last = 0, m;
+      while ((m = re.exec(str)) !== null) {
+        if (m.index > last) frag.appendChild(document.createTextNode(str.slice(last, m.index)));
+        const s = document.createElement("strong");
+        s.textContent = m[0];
+        frag.appendChild(s);
+        last = m.index + m[0].length;
+      }
+      if (last < str.length) frag.appendChild(document.createTextNode(str.slice(last)));
+      return frag;
+    }
+
+    function badge(text, cls) {
+      const b = document.createElement("span");
+      b.className = "badge " + cls;
+      b.textContent = text;
+      return b;
+    }
+
+    SECTIONS.forEach(function (sec, si) {
+      const section = document.createElement("section");
+      section.className = si === SECTIONS.length - 1 ? "" : "mb-5";
+
+      const h2 = document.createElement("h2");
+      h2.className = "section-title h4";
+      h2.textContent = sec.title;
+      const count = document.createElement("span");
+      count.className = "count";
+      count.textContent = sec.items.length;
+      h2.appendChild(count);
+      section.appendChild(h2);
+
+      const list = document.createElement("div");
+
+      sec.items.forEach(function (p) {
+        const item = document.createElement("div");
+        item.className = "pub-item";
+
+        const year = document.createElement("div");
+        year.className = "pub-year";
+        year.textContent = p.year;
+
+        const body = document.createElement("div");
+        body.className = "pub-body";
+
+        // 저자
+        const authors = document.createElement("span");
+        authors.appendChild(renderAuthors(p.authors));
+        authors.appendChild(document.createTextNode("."));
+        body.appendChild(authors);
+
+        // 제목 (link가 있으면 하이퍼링크)
+        const titleWrap = document.createElement("span");
+        titleWrap.className = "pub-title";
+        const titleText = "“" + p.title + ".”";
+        if (p.link) {
+          const a = document.createElement("a");
+          a.href = p.link;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = titleText;
+          titleWrap.appendChild(a);
+        } else {
+          titleWrap.textContent = titleText;
+        }
+        body.appendChild(titleWrap);
+
+        // 게재처 + 배지
+        const venueLine = document.createElement("span");
+        const venue = document.createElement("span");
+        venue.className = "pub-venue";
+        venue.textContent = p.venue + (p.tags && p.tags.indexOf("short") !== -1 ? " (Short)" : "");
+        venueLine.appendChild(venue);
+        venueLine.appendChild(document.createTextNode(", " + p.year + "."));
+
+        const badges = document.createElement("span");
+        badges.className = "pub-badges";
+        (p.tags || []).forEach(function (t) {
+          if (TAGS[t]) badges.appendChild(badge(TAGS[t].text, TAGS[t].cls));
+        });
+        if (p.if) badges.appendChild(badge("IF " + p.if, "bg-info"));
+        if (badges.childNodes.length) venueLine.appendChild(badges);
+
+        body.appendChild(venueLine);
+
+        item.append(year, body);
+        list.appendChild(item);
+      });
+
+      section.appendChild(list);
+      root.appendChild(section);
+    });
+  });
+</script>
 
 </body>
 </html>
